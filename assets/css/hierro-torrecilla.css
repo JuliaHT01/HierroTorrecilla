@@ -3116,13 +3116,17 @@ h3 span {
   }
 
 }
+/* ======================================================
+   AJUSTE CHIPS - ENFOQUE HÍBRIDO
+   ====================================================== */
+
 .ht-approach--hybrid .ht-chip {
 
   background:
-    rgba(159,227,224,.10);
+    rgba(31,165,163,.07);
 
   border:
-    1px solid rgba(159,227,224,.28);
+    1px solid rgba(31,165,163,.12);
 
   color:
     #9FE3E0;
