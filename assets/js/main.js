@@ -1,137 +1,271 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
 
 
-  /* =====================================================
-     AÑO DEL FOOTER
-     ===================================================== */
+    /* ================================================
+       AÑO FOOTER
+       ================================================ */
 
-  const year =
-    document.getElementById("htCurrentYear");
+    const year =
+      document.getElementById(
+        "htCurrentYear"
+      );
 
-  if (year) {
+    if (year) {
 
-    year.textContent =
-      new Date().getFullYear();
+      year.textContent =
+        new Date().getFullYear();
 
-  }
-
-
-  /* =====================================================
-     BOTÓN VOLVER ARRIBA
-     ===================================================== */
-
-  const backToTop =
-    document.getElementById("htBackToTop");
+    }
 
 
-  function updateBackToTop() {
 
-    if (!backToTop) return;
+    /* ================================================
+       VOLVER ARRIBA
+       ================================================ */
+
+    const backToTop =
+      document.getElementById(
+        "htBackToTop"
+      );
 
 
-    if (window.scrollY > 420) {
+    function updateBackToTop() {
 
-      backToTop.classList.add(
-        "is-visible"
+      if (!backToTop) {
+        return;
+      }
+
+
+      if (window.scrollY > 420) {
+
+        backToTop.classList.add(
+          "is-visible"
+        );
+
+      } else {
+
+        backToTop.classList.remove(
+          "is-visible"
+        );
+
+      }
+
+    }
+
+
+    window.addEventListener(
+      "scroll",
+      updateBackToTop,
+      {
+        passive: true
+      }
+    );
+
+
+    updateBackToTop();
+
+
+    if (backToTop) {
+
+      backToTop.addEventListener(
+        "click",
+        function () {
+
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+
+        }
+      );
+
+    }
+
+
+
+    /* ================================================
+       REVEAL
+       ================================================ */
+
+    const revealElements =
+      document.querySelectorAll(
+        "[data-reveal]"
+      );
+
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+
+      const observer =
+        new IntersectionObserver(
+
+          function (entries) {
+
+            entries.forEach(
+              function (entry) {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target
+                    .classList
+                    .add(
+                      "is-visible"
+                    );
+
+                  observer
+                    .unobserve(
+                      entry.target
+                    );
+
+                }
+
+              }
+            );
+
+          },
+
+          {
+            threshold: .12
+          }
+
+        );
+
+
+      revealElements.forEach(
+        function (element) {
+
+          observer.observe(
+            element
+          );
+
+        }
       );
 
     } else {
 
-      backToTop.classList.remove(
-        "is-visible"
+      revealElements.forEach(
+        function (element) {
+
+          element.classList.add(
+            "is-visible"
+          );
+
+        }
       );
 
     }
 
-  }
 
 
-  window.addEventListener(
-    "scroll",
-    updateBackToTop,
-    {
-      passive: true
-    }
-  );
+    /* ================================================
+       MENU MOBILE
+       ================================================ */
+
+    const menuButton =
+      document.getElementById(
+        "htMenuToggle"
+      );
 
 
-  updateBackToTop();
+    const mobileMenu =
+      document.getElementById(
+        "htMobileMenu"
+      );
 
 
-  if (backToTop) {
+    function closeMenu() {
 
-    backToTop.addEventListener(
-      "click",
-      function () {
-
-        window.scrollTo({
-
-          top: 0,
-
-          behavior: "smooth"
-
-        });
-
+      if (!menuButton || !mobileMenu) {
+        return;
       }
-    );
-
-  }
 
 
-  /* =====================================================
-     REVEAL AL HACER SCROLL
-     ===================================================== */
+      menuButton.classList.remove(
+        "is-open"
+      );
 
-  const elements =
-    document.querySelectorAll(
-      "[data-reveal]"
-    );
+      mobileMenu.classList.remove(
+        "is-open"
+      );
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
 
 
-  const observer =
-    new IntersectionObserver(
+    if (
+      menuButton &&
+      mobileMenu
+    ) {
 
-      function (entries) {
+      menuButton.addEventListener(
+        "click",
+        function () {
 
-        entries.forEach(
-          function (entry) {
-
-            if (
-              entry.isIntersecting
-            ) {
-
-              entry.target
-                .classList
-                .add(
-                  "is-visible"
-                );
-
-              observer.unobserve(
-                entry.target
+          const isOpen =
+            mobileMenu
+              .classList
+              .toggle(
+                "is-open"
               );
 
-            }
+
+          menuButton
+            .classList
+            .toggle(
+              "is-open",
+              isOpen
+            );
+
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
+
+        }
+      );
+
+
+      mobileMenu
+        .querySelectorAll("a")
+        .forEach(
+          function (link) {
+
+            link.addEventListener(
+              "click",
+              closeMenu
+            );
 
           }
         );
 
-      },
 
-      {
-        threshold: 0.12
-      }
+      window.addEventListener(
+        "resize",
+        function () {
 
-    );
+          if (
+            window.innerWidth > 760
+          ) {
 
+            closeMenu();
 
-  elements.forEach(
-    function (element) {
+          }
 
-      observer.observe(
-        element
+        }
       );
 
     }
-  );
 
-});
+  }
+);
