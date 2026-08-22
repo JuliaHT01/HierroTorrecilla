@@ -1,56 +1,137 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+
   /* =====================================================
-     AÑO FOOTER
+     AÑO DEL FOOTER
      ===================================================== */
 
-  const yearElement = document.getElementById("htCurrentYear");
+  const year =
+    document.getElementById("htCurrentYear");
 
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
+  if (year) {
+
+    year.textContent =
+      new Date().getFullYear();
+
   }
 
 
   /* =====================================================
-     VOLVER ARRIBA
+     BOTÓN VOLVER ARRIBA
      ===================================================== */
 
-  const backToTopButton = document.getElementById("htBackToTop");
+  const backToTop =
+    document.getElementById("htBackToTop");
 
-  if (backToTopButton) {
 
-    function toggleBackToTop() {
+  function updateBackToTop() {
 
-      if (window.scrollY > 350) {
-        backToTopButton.classList.add("is-visible");
-      } else {
-        backToTopButton.classList.remove("is-visible");
-      }
+    if (!backToTop) return;
+
+
+    if (window.scrollY > 420) {
+
+      backToTop.classList.add(
+        "is-visible"
+      );
+
+    } else {
+
+      backToTop.classList.remove(
+        "is-visible"
+      );
 
     }
 
-
-    window.addEventListener(
-      "scroll",
-      toggleBackToTop
-    );
+  }
 
 
-    toggleBackToTop();
+  window.addEventListener(
+    "scroll",
+    updateBackToTop,
+    {
+      passive: true
+    }
+  );
 
 
-    backToTopButton.addEventListener(
+  updateBackToTop();
+
+
+  if (backToTop) {
+
+    backToTop.addEventListener(
       "click",
       function () {
 
         window.scrollTo({
+
           top: 0,
+
           behavior: "smooth"
+
         });
 
       }
     );
 
   }
+
+
+  /* =====================================================
+     REVEAL AL HACER SCROLL
+     ===================================================== */
+
+  const elements =
+    document.querySelectorAll(
+      "[data-reveal]"
+    );
+
+
+  const observer =
+    new IntersectionObserver(
+
+      function (entries) {
+
+        entries.forEach(
+          function (entry) {
+
+            if (
+              entry.isIntersecting
+            ) {
+
+              entry.target
+                .classList
+                .add(
+                  "is-visible"
+                );
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          }
+        );
+
+      },
+
+      {
+        threshold: 0.12
+      }
+
+    );
+
+
+  elements.forEach(
+    function (element) {
+
+      observer.observe(
+        element
+      );
+
+    }
+  );
 
 });
