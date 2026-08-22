@@ -12,22 +12,22 @@
   >
 
   <title>
-    Metodología | Hierro Torrecilla
+    Hierro Torrecilla | Consultoría Empresarial
   </title>
 
   <meta
     name="description"
-    content="Metodología de consultoría con enfoque de negocio y modelo híbrido negocio y tecnología."
+    content="Hierro Torrecilla es un proyecto de consultoría empresarial enfocado en estrategia, gestión, procesos, tecnología, datos y transformación."
   >
 
   <link
     rel="canonical"
-    href="https://hierrotorrecilla.es/metodologia/"
+    href="https://hierrotorrecilla.es/"
   >
 
   <link
     rel="stylesheet"
-    href="../assets/css/hierro-torrecilla.css"
+    href="assets/css/hierro-torrecilla.css"
   >
 
 </head>
@@ -36,71 +36,138 @@
 <body>
 
 
+<!-- ==================================================
+     HEADER
+     ================================================== -->
+
 <header class="ht-header">
 
   <div class="ht-shell ht-nav">
 
-    <a href="../" class="ht-brand">
+
+    <a
+      href="./"
+      class="ht-brand"
+      aria-label="Hierro Torrecilla - Inicio"
+    >
+
       HIE<span class="rr-special">RR</span>O
       TO<span class="rr-special">RR</span>ECILLA
+
     </a>
 
 
-    <nav class="ht-menu">
 
-      <a href="../">
-        Inicio
-      </a>
-
-      <a href="../servicios/">
-        Servicios
-      </a>
+    <nav
+      class="ht-menu"
+      aria-label="Navegación principal"
+    >
 
       <a
         href="./"
         class="active"
       >
+        Inicio
+      </a>
+
+      <a href="servicios/">
+        Servicios
+      </a>
+
+      <a href="metodologia/">
         Metodología
       </a>
 
       <a
-        href="../contacto/"
+        href="contacto/"
         class="ht-menu-contact"
       >
         Contacto
       </a>
 
     </nav>
-<button
-  type="button"
-  class="ht-menu-toggle"
-  id="htMenuToggle"
-  aria-label="Abrir menú"
-  aria-expanded="false"
-  aria-controls="htMobileMenu"
->
-  <span></span>
-</button>
+
+
+
+    <button
+      type="button"
+      class="ht-menu-toggle"
+      id="htMenuToggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="htMobileMenu"
+    >
+
+      <span></span>
+
+    </button>
+
+
   </div>
 
 </header>
 
 
 
+<!-- ==================================================
+     MENÚ MOBILE
+     ================================================== -->
+
+<nav
+  class="ht-mobile-menu"
+  id="htMobileMenu"
+  aria-label="Navegación móvil"
+>
+
+  <a href="./">
+    Inicio
+  </a>
+
+  <a href="servicios/">
+    Servicios
+  </a>
+
+  <a href="metodologia/">
+    Metodología
+  </a>
+
+  <a href="contacto/">
+    Contacto
+  </a>
+
+</nav>
+
+
+
 <main>
 
 
-<section class="ht-page-hero">
+<!-- ==================================================
+     HERO
+     ================================================== -->
 
-  <div class="ht-shell">
+<section class="ht-home-hero">
+
+  <div class="ht-shell ht-home-hero__inner">
 
 
-    <p
-      class="ht-kicker"
+    <div
+      class="ht-brandline"
       data-reveal
     >
-      Metodología
-    </p>
+
+      <strong>
+        HIERRO TORRECILLA
+      </strong>
+
+      <i>·</i>
+
+      <span>
+        CONSULTORÍA EMPRESARIAL
+      </span>
+
+    </div>
+
 
 
     <h1
@@ -108,23 +175,149 @@
       data-reveal
       data-delay="1"
     >
-      Primero entender.
+
+      Rigor para decidir.
+
       <span>
-        Después transformar.
+        Resultados para avanzar.
       </span>
+
     </h1>
 
 
+
     <p
-      class="ht-page-hero__lead"
+      class="ht-home-hero__copy"
       data-reveal
       data-delay="2"
     >
-      Cada empresa, reto y oportunidad requiere
-      una forma distinta de trabajar.
-      Nuestra metodología reduce incertidumbre
-      y concentra recursos donde generan mayor impacto.
+
+      Estrategia, gestión y tecnología para ayudar
+      a las empresas a tomar mejores decisiones,
+      mejorar su funcionamiento y transformar
+      oportunidades en resultados.
+
     </p>
+
+
+
+    <div
+      class="ht-actions"
+      data-reveal
+      data-delay="3"
+    >
+
+      <a
+        class="ht-btn ht-btn-primary"
+        href="contacto/"
+      >
+        Cuéntanos tu reto
+      </a>
+
+      <a
+        class="ht-btn ht-btn-secondary"
+        href="servicios/"
+      >
+        Explorar servicios
+      </a>
+
+    </div>
+
+
+
+    <!-- PRINCIPIOS -->
+
+    <div class="ht-signal">
+
+
+      <div
+        class="ht-signal__item"
+        data-reveal
+      >
+
+        <span>
+          NEGOCIO
+        </span>
+
+        <strong>
+          Decisiones con criterio
+        </strong>
+
+        <small>
+          Estrategia y prioridades claras.
+        </small>
+
+      </div>
+
+
+
+      <div
+        class="ht-signal__item"
+        data-reveal
+        data-delay="1"
+      >
+
+        <span>
+          OPERACIONES
+        </span>
+
+        <strong>
+          Procesos que funcionan
+        </strong>
+
+        <small>
+          Organización y eficiencia.
+        </small>
+
+      </div>
+
+
+
+      <div
+        class="ht-signal__item"
+        data-reveal
+        data-delay="2"
+      >
+
+        <span>
+          TECNOLOGÍA
+        </span>
+
+        <strong>
+          Soluciones con propósito
+        </strong>
+
+        <small>
+          Tecnología al servicio del negocio.
+        </small>
+
+      </div>
+
+
+
+      <div
+        class="ht-signal__item"
+        data-reveal
+        data-delay="3"
+      >
+
+        <span>
+          DATOS
+        </span>
+
+        <strong>
+          Evidencia para avanzar
+        </strong>
+
+        <small>
+          Información útil para decidir mejor.
+        </small>
+
+      </div>
+
+
+    </div>
+
 
   </div>
 
@@ -132,9 +325,11 @@
 
 
 
-<!-- METODOLOGÍA BASE -->
+<!-- ==================================================
+     SERVICIOS
+     ================================================== -->
 
-<section class="ht-method-core">
+<section class="ht-section">
 
   <div class="ht-shell">
 
@@ -147,34 +342,254 @@
       <div>
 
         <p class="ht-kicker">
-          Nuestra forma de trabajar
+          Qué hacemos
         </p>
 
         <h2 class="ht-section-title">
-          Una metodología.
+
+          Distintas capacidades.
+
           <span>
-            Cuatro movimientos.
+            Un mismo objetivo.
           </span>
+
         </h2>
 
       </div>
 
 
       <p>
-        Comprender la realidad, analizarla,
-        priorizar con criterio y transformar
-        de forma ejecutable.
+
+        Abordamos los retos de negocio desde una perspectiva
+        integral. A veces la respuesta es puramente empresarial;
+        otras exige combinar negocio y tecnología.
+
       </p>
 
     </div>
 
 
 
-    <div class="ht-method-core__grid">
+    <div class="ht-service-grid">
 
 
       <article
-        class="ht-core-card"
+        class="ht-service-tile"
+        data-reveal
+      >
+
+        <span class="ht-service-tile__num">
+          01
+        </span>
+
+        <h3>
+          Estrategia y planificación empresarial
+        </h3>
+
+        <p>
+          Prioridades, objetivos, planes de acción
+          y oportunidades de crecimiento.
+        </p>
+
+        <a href="servicios/#estrategia">
+          Explorar ↗
+        </a>
+
+      </article>
+
+
+
+      <article
+        class="ht-service-tile"
+        data-reveal
+        data-delay="1"
+      >
+
+        <span class="ht-service-tile__num">
+          02
+        </span>
+
+        <h3>
+          Organización y mejora de procesos
+        </h3>
+
+        <p>
+          Modelos operativos, responsabilidades
+          y eficiencia interna.
+        </p>
+
+        <a href="servicios/#procesos">
+          Explorar ↗
+        </a>
+
+      </article>
+
+
+
+      <article
+        class="ht-service-tile"
+        data-reveal
+      >
+
+        <span class="ht-service-tile__num">
+          03
+        </span>
+
+        <h3>
+          Análisis y control de gestión
+        </h3>
+
+        <p>
+          KPIs, rentabilidad, reporting
+          y decisiones basadas en evidencia.
+        </p>
+
+        <a href="servicios/#analisis">
+          Explorar ↗
+        </a>
+
+      </article>
+
+
+
+      <article
+        class="ht-service-tile"
+        data-reveal
+        data-delay="1"
+      >
+
+        <span class="ht-service-tile__num">
+          04
+        </span>
+
+        <h3>
+          Crecimiento y desarrollo empresarial
+        </h3>
+
+        <p>
+          Nuevos mercados, líneas de negocio,
+          escalabilidad y estrategia comercial.
+        </p>
+
+        <a href="servicios/#crecimiento">
+          Explorar ↗
+        </a>
+
+      </article>
+
+
+
+      <article
+        class="ht-service-tile"
+        data-reveal
+      >
+
+        <span class="ht-service-tile__num">
+          05
+        </span>
+
+        <h3>
+          Transformación digital y tecnología
+        </h3>
+
+        <p>
+          Tecnología aplicada allí donde realmente
+          puede mejorar el negocio.
+        </p>
+
+        <a href="servicios/#tecnologia">
+          Explorar ↗
+        </a>
+
+      </article>
+
+
+
+      <article
+        class="ht-service-tile"
+        data-reveal
+        data-delay="1"
+      >
+
+        <span class="ht-service-tile__num">
+          06
+        </span>
+
+        <h3>
+          Datos, automatización e IA
+        </h3>
+
+        <p>
+          Casos de uso prácticos orientados
+          a productividad y resultados.
+        </p>
+
+        <a href="servicios/#datos">
+          Explorar ↗
+        </a>
+
+      </article>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     METODOLOGÍA
+     ================================================== -->
+
+<section class="ht-section ht-method-preview">
+
+  <div class="ht-shell">
+
+
+    <div
+      class="ht-section-head"
+      data-reveal
+    >
+
+      <div>
+
+        <p class="ht-kicker">
+          Metodología
+        </p>
+
+        <h2 class="ht-section-title">
+
+          Primero entender.
+
+          <span>
+            Después transformar.
+          </span>
+
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        Una metodología simple en apariencia,
+        exigente en ejecución: comprender, analizar,
+        priorizar y transformar.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="ht-method-rail">
+
+
+      <article
+        class="ht-method-node"
         data-reveal
       >
 
@@ -182,25 +597,21 @@
           01
         </span>
 
-        <div>
+        <h3>
+          Entender
+        </h3>
 
-          <h3>
-            Entender
-          </h3>
-
-          <p>
-            Objetivos, procesos,
-            organización, sistemas y datos.
-          </p>
-
-        </div>
+        <p>
+          Contexto, objetivos,
+          datos y realidad operativa.
+        </p>
 
       </article>
 
 
 
       <article
-        class="ht-core-card"
+        class="ht-method-node"
         data-reveal
         data-delay="1"
       >
@@ -209,25 +620,21 @@
           02
         </span>
 
-        <div>
+        <h3>
+          Analizar
+        </h3>
 
-          <h3>
-            Analizar
-          </h3>
-
-          <p>
-            Causas, oportunidades,
-            riesgos y capacidad de mejora.
-          </p>
-
-        </div>
+        <p>
+          Causas, oportunidades,
+          riesgos y capacidad de mejora.
+        </p>
 
       </article>
 
 
 
       <article
-        class="ht-core-card"
+        class="ht-method-node"
         data-reveal
         data-delay="2"
       >
@@ -236,25 +643,21 @@
           03
         </span>
 
-        <div>
+        <h3>
+          Priorizar
+        </h3>
 
-          <h3>
-            Priorizar
-          </h3>
-
-          <p>
-            Impacto, esfuerzo,
-            inversión, riesgo y retorno.
-          </p>
-
-        </div>
+        <p>
+          Impacto, esfuerzo,
+          inversión y retorno esperado.
+        </p>
 
       </article>
 
 
 
       <article
-        class="ht-core-card"
+        class="ht-method-node"
         data-reveal
         data-delay="3"
       >
@@ -263,151 +666,33 @@
           04
         </span>
 
-        <div>
-
-          <h3>
-            Transformar
-          </h3>
-
-          <p>
-            Implantar, acompañar,
-            medir y ajustar.
-          </p>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- DOS ENFOQUES -->
-
-<section class="ht-approaches">
-
-  <div class="ht-shell">
-
-
-    <div
-      class="ht-section-head"
-      data-reveal
-    >
-
-      <div>
-
-        <p class="ht-kicker">
-          Dos enfoques de trabajo
-        </p>
-
-        <h2 class="ht-section-title">
-          El reto determina
-          <span>
-            cómo lo abordamos.
-          </span>
-        </h2>
-
-      </div>
-
-
-      <p>
-        No toda necesidad empresarial requiere tecnología.
-        Elegimos el enfoque según el problema,
-        el contexto, la madurez y el resultado buscado.
-      </p>
-
-    </div>
-
-
-
-    <div class="ht-approach-grid">
-
-
-      <article
-        class="ht-approach ht-approach--business"
-        data-reveal
-      >
-
-        <span class="ht-approach__tag">
-          01 · Negocio
-        </span>
-
-
         <h3>
-          Enfoque
-          <span>
-            Negocio.
-          </span>
+          Transformar
         </h3>
 
-
         <p>
-          Para retos donde el valor está en
-          estrategia, organización, procesos,
-          gestión o crecimiento, sin necesidad
-          de desarrollar una solución tecnológica.
+          Implantar, acompañar,
+          medir y ajustar.
         </p>
-
-
-        <div class="ht-chip-row">
-
-          <span class="ht-chip">Estrategia</span>
-          <span class="ht-chip">Procesos</span>
-          <span class="ht-chip">Organización</span>
-          <span class="ht-chip">Control de gestión</span>
-          <span class="ht-chip">Crecimiento</span>
-
-        </div>
 
       </article>
 
 
+    </div>
 
-      <article
-        class="ht-approach ht-approach--hybrid"
-        data-reveal
-        data-delay="1"
+
+
+    <div class="ht-actions">
+
+      <a
+        class="ht-btn ht-btn-secondary"
+        href="metodologia/"
       >
-
-        <span class="ht-approach__tag">
-          02 · Negocio + Tecnología
-        </span>
-
-
-        <h3>
-          Enfoque
-          <span>
-            híbrido.
-          </span>
-        </h3>
-
-
-        <p>
-          Para retos donde la solución combina
-          necesidades empresariales con tecnología,
-          datos, automatización o inteligencia artificial.
-        </p>
-
-
-        <div class="ht-chip-row">
-
-          <span class="ht-chip">Negocio</span>
-          <span class="ht-chip">Datos</span>
-          <span class="ht-chip">Automatización</span>
-          <span class="ht-chip">Tecnología</span>
-          <span class="ht-chip">IA</span>
-
-        </div>
-
-      </article>
-
+        Conoce nuestra metodología
+      </a>
 
     </div>
+
 
   </div>
 
@@ -415,288 +700,14 @@
 
 
 
-<!-- TIPOLOGÍAS -->
-
-<section class="ht-projects">
-
-  <div class="ht-shell">
-
-
-    <div
-      class="ht-section-head"
-      data-reveal
-    >
-
-      <div>
-
-        <p class="ht-kicker">
-          Tipologías de proyecto
-        </p>
-
-        <h2 class="ht-section-title">
-          Diferentes niveles
-          <span>
-            de alcance y compromiso.
-          </span>
-        </h2>
-
-      </div>
-
-
-      <p>
-        El formato depende del enfoque,
-        la necesidad, la incertidumbre
-        y la madurez del cliente.
-      </p>
-
-    </div>
-
-
-
-    <!-- NEGOCIO -->
-
-    <div
-      class="ht-project-box"
-      data-reveal
-    >
-
-
-      <div class="ht-project-box__head">
-
-        <div>
-
-          <p class="ht-kicker">
-            Enfoque de negocio
-          </p>
-
-          <h3>
-            De entender la situación
-            <span>
-              a consolidar el cambio.
-            </span>
-          </h3>
-
-        </div>
-
-
-        <p>
-          Diagnosticar, implantar
-          y acompañar.
-        </p>
-
-      </div>
-
-
-
-      <div class="ht-project-flow">
-
-
-        <article class="ht-stage">
-
-          <span>01</span>
-
-          <em>
-            ¿Dónde estamos?
-          </em>
-
-          <h4>
-            Assessment
-          </h4>
-
-          <p>
-            Diagnóstico de situación,
-            problemas, oportunidades
-            y prioridades.
-          </p>
-
-        </article>
-
-
-
-        <article class="ht-stage">
-
-          <span>02</span>
-
-          <em>
-            ¿Cómo cambiamos?
-          </em>
-
-          <h4>
-            Adopción
-          </h4>
-
-          <p>
-            Implantación de decisiones,
-            procesos o nuevas formas
-            de trabajo.
-          </p>
-
-        </article>
-
-
-
-        <article class="ht-stage">
-
-          <span>03</span>
-
-          <em>
-            ¿Cómo lo consolidamos?
-          </em>
-
-          <h4>
-            Follow & Support
-          </h4>
-
-          <p>
-            Seguimiento, soporte,
-            ajustes y acompañamiento.
-          </p>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-
-
-    <!-- HÍBRIDO -->
-
-    <div
-      class="ht-project-box ht-project-box--hybrid"
-      data-reveal
-    >
-
-
-      <div class="ht-project-box__head">
-
-        <div>
-
-          <p class="ht-kicker">
-            Negocio + tecnología
-          </p>
-
-          <h3>
-            De validar una idea
-            <span>
-              a demostrar su valor.
-            </span>
-          </h3>
-
-        </div>
-
-
-        <p>
-          Alcances progresivos para reducir
-          incertidumbre antes de aumentar inversión.
-        </p>
-
-      </div>
-
-
-
-      <div class="ht-project-flow ht-project-flow--4">
-
-
-        <article class="ht-stage">
-
-          <span>01</span>
-
-          <em>
-            ¿Puede funcionar?
-          </em>
-
-          <h4>
-            PoC
-          </h4>
-
-          <p>
-            Validación de una hipótesis
-            con alcance limitado.
-          </p>
-
-        </article>
-
-
-
-        <article class="ht-stage">
-
-          <span>02</span>
-
-          <em>
-            ¿Cómo podría funcionar?
-          </em>
-
-          <h4>
-            Prototipo
-          </h4>
-
-          <p>
-            Validación inicial de lógica,
-            procesos e interacción.
-          </p>
-
-        </article>
-
-
-
-        <article class="ht-stage">
-
-          <span>03</span>
-
-          <em>
-            ¿Funciona en realidad?
-          </em>
-
-          <h4>
-            Piloto
-          </h4>
-
-          <p>
-            Prueba controlada
-            en un entorno real.
-          </p>
-
-        </article>
-
-
-
-        <article class="ht-stage">
-
-          <span>04</span>
-
-          <em>
-            ¿Genera valor?
-          </em>
-
-          <h4>
-            MVP
-          </h4>
-
-          <p>
-            Versión funcional mínima
-            preparada para evolucionar.
-          </p>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- FLEXIBILIDAD -->
+<!-- ==================================================
+     CTA FINAL
+     ================================================== -->
 
 <section class="ht-section">
 
   <div class="ht-shell">
+
 
     <div
       class="ht-impact-box"
@@ -704,87 +715,40 @@
     >
 
       <p class="ht-kicker">
-        Flexibilidad por diseño
+        Empecemos con claridad
       </p>
 
 
       <h2 class="ht-section-title">
-        Un recorrido posible.
+
+        No hace falta tener
+
         <span>
-          No una obligación.
+          el problema perfectamente definido.
         </span>
+
       </h2>
 
 
       <p>
-        Cada modalidad puede contratarse de forma independiente.
-        El recorrido solo avanza cuando existe evidencia suficiente
-        para justificar el siguiente nivel de inversión.
+
+        Podemos empezar entendiendo qué está ocurriendo
+        y determinar juntos dónde tiene más sentido actuar.
+
       </p>
-
-
-
-      <div class="ht-risk-rail">
-
-
-        <div class="ht-risk">
-
-          <span>01</span>
-
-          <strong>
-            Validar
-          </strong>
-
-        </div>
-
-
-        <div class="ht-risk">
-
-          <span>02</span>
-
-          <strong>
-            Aprender
-          </strong>
-
-        </div>
-
-
-        <div class="ht-risk">
-
-          <span>03</span>
-
-          <strong>
-            Decidir
-          </strong>
-
-        </div>
-
-
-        <div class="ht-risk">
-
-          <span>04</span>
-
-          <strong>
-            Escalar
-          </strong>
-
-        </div>
-
-
-      </div>
-
 
 
       <div class="ht-actions">
 
         <a
+          href="contacto/"
           class="ht-btn ht-btn-primary"
-          href="../contacto/"
         >
           Cuéntanos tu reto
         </a>
 
       </div>
+
 
     </div>
 
@@ -797,15 +761,24 @@
 
 
 
+<!-- ==================================================
+     FOOTER
+     ================================================== -->
+
 <footer class="ht-footer">
 
   <div class="ht-shell">
 
+
     <div class="ht-footer-grid">
+
 
       <div class="ht-footer-brand">
 
-        <a href="../" class="ht-footer-logo">
+        <a
+          href="./"
+          class="ht-footer-logo"
+        >
 
           HIE<span class="rr">RR</span>O
           TO<span class="rr">RR</span>ECILLA
@@ -821,11 +794,13 @@
         </h3>
 
         <p>
-          Estrategia, gestión y tecnología para empresas
-          que quieren avanzar con claridad.
+          Estrategia, gestión y tecnología
+          para empresas que quieren avanzar
+          con claridad.
         </p>
 
       </div>
+
 
 
       <div class="ht-footer-col">
@@ -834,12 +809,24 @@
           Navegación
         </strong>
 
-        <a href="../">Inicio</a>
-        <a href="../servicios/">Servicios</a>
-        <a href="./">Metodología</a>
-        <a href="../contacto/">Contacto</a>
+        <a href="./">
+          Inicio
+        </a>
+
+        <a href="servicios/">
+          Servicios
+        </a>
+
+        <a href="metodologia/">
+          Metodología
+        </a>
+
+        <a href="contacto/">
+          Contacto
+        </a>
 
       </div>
+
 
 
       <div class="ht-footer-col">
@@ -862,31 +849,53 @@
 
       </div>
 
+
     </div>
+
 
 
     <div class="ht-footer-bottom">
 
       <span>
+
         ©
-        <span id="htCurrentYear">2026</span>
+
+        <span id="htCurrentYear">
+          2026
+        </span>
+
         Hierro Torrecilla
+
       </span>
 
+
       <div class="ht-footer-legal">
-        <a href="#">Aviso legal</a>
-        <a href="#">Privacidad</a>
-        <a href="#">Cookies</a>
+
+        <a href="aviso-legal/">
+          Aviso legal
+        </a>
+
+        <a href="privacidad/">
+          Privacidad
+        </a>
+
+        <a href="cookies/">
+          Cookies
+        </a>
+
       </div>
 
     </div>
+
 
   </div>
 
 </footer>
 
 
+
 <button
+  type="button"
   class="ht-backtotop"
   id="htBackToTop"
   aria-label="Volver arriba"
@@ -895,7 +904,7 @@
 </button>
 
 
-<script src="../assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 
 
 </body>
