@@ -17,7 +17,7 @@
 
   <meta
     name="description"
-    content="Contacta con Hierro Torrecilla Consultoría Empresarial."
+    content="Contacta con Hierro Torrecilla Consultoría Empresarial. Cuéntanos qué está ocurriendo y qué te gustaría mejorar."
   >
 
   <link
@@ -36,16 +36,23 @@
 <body>
 
 
+<!-- HEADER -->
+
 <header class="ht-header">
 
   <div class="ht-shell ht-nav">
 
-    <a href="../" class="ht-brand">
+
+    <a
+      href="../"
+      class="ht-brand"
+    >
 
       HIE<span class="rr-special">RR</span>O
       TO<span class="rr-special">RR</span>ECILLA
 
     </a>
+
 
 
     <nav class="ht-menu">
@@ -70,19 +77,50 @@
       </a>
 
     </nav>
-<button
-  type="button"
-  class="ht-menu-toggle"
-  id="htMenuToggle"
-  aria-label="Abrir menú"
-  aria-expanded="false"
-  aria-controls="htMobileMenu"
->
-  <span></span>
-</button>
+
+
+
+    <button
+      type="button"
+      class="ht-menu-toggle"
+      id="htMenuToggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="htMobileMenu"
+    >
+      <span></span>
+    </button>
+
+
   </div>
 
 </header>
+
+
+
+<nav
+  class="ht-mobile-menu"
+  id="htMobileMenu"
+  aria-label="Navegación móvil"
+>
+
+  <a href="../">
+    Inicio
+  </a>
+
+  <a href="../servicios/">
+    Servicios
+  </a>
+
+  <a href="../metodologia/">
+    Metodología
+  </a>
+
+  <a href="../contacto/">
+    Contacto
+  </a>
+
+</nav>
 
 
 
@@ -107,10 +145,13 @@
       data-reveal
       data-delay="1"
     >
+
       Cuéntanos qué está pasando.
+
       <span>
         Empezamos por entenderlo.
       </span>
+
     </h1>
 
 
@@ -129,18 +170,42 @@
         </p>
 
         <p>
+
           No necesitas tener la solución definida.
           Cuéntanos brevemente qué ocurre
           y qué te gustaría mejorar.
+
         </p>
 
       </div>
 
 
 
+      <!-- SEÑALES DE CONFIANZA -->
+
+      <div class="ht-contact-trust">
+
+        <span>
+          Respuesta directa
+        </span>
+
+        <span>
+          Sin compromiso
+        </span>
+
+        <span>
+          Confidencialidad
+        </span>
+
+      </div>
+
+
+
+      <!-- FORMULARIO -->
+
       <form
 
-        action=https://formspree.io/f/meajdveo
+        action="https://formspree.io/f/meajdveo"
 
         method="POST"
 
@@ -155,12 +220,14 @@
 
 
 
+        <!-- NOMBRE + EMPRESA -->
+
         <div class="ht-form-row">
 
 
           <div class="ht-field">
 
-            <label>
+            <label for="nombre">
 
               Nombre
 
@@ -170,10 +237,13 @@
 
             </label>
 
+
             <input
               type="text"
+              id="nombre"
               name="nombre"
               placeholder="Tu nombre"
+              autocomplete="name"
               required
             >
 
@@ -183,7 +253,7 @@
 
           <div class="ht-field">
 
-            <label>
+            <label for="empresa">
 
               Empresa
 
@@ -193,10 +263,13 @@
 
             </label>
 
+
             <input
               type="text"
+              id="empresa"
               name="empresa"
               placeholder="Nombre de la empresa"
+              autocomplete="organization"
             >
 
           </div>
@@ -206,12 +279,14 @@
 
 
 
+        <!-- EMAIL + TELÉFONO -->
+
         <div class="ht-form-row">
 
 
           <div class="ht-field">
 
-            <label>
+            <label for="email">
 
               Email
 
@@ -221,10 +296,13 @@
 
             </label>
 
+
             <input
               type="email"
+              id="email"
               name="email"
               placeholder="nombre@empresa.com"
+              autocomplete="email"
               required
             >
 
@@ -234,7 +312,7 @@
 
           <div class="ht-field">
 
-            <label>
+            <label for="telefono">
 
               Teléfono
 
@@ -244,10 +322,13 @@
 
             </label>
 
+
             <input
               type="tel"
+              id="telefono"
               name="telefono"
               placeholder="+34"
+              autocomplete="tel"
             >
 
           </div>
@@ -257,9 +338,11 @@
 
 
 
+        <!-- TAMAÑO -->
+
         <div class="ht-field">
 
-          <label>
+          <label for="tamano">
 
             Tamaño aproximado de la empresa
 
@@ -270,7 +353,10 @@
           </label>
 
 
-          <select name="tamano">
+          <select
+            id="tamano"
+            name="tamano"
+          >
 
             <option value="">
               Selecciona una opción
@@ -298,9 +384,11 @@
 
 
 
+        <!-- SERVICIO -->
+
         <div class="ht-field">
 
-          <label>
+          <label for="servicio">
 
             ¿En qué podemos ayudarte?
 
@@ -311,7 +399,10 @@
           </label>
 
 
-          <select name="servicio">
+          <select
+            id="servicio"
+            name="servicio"
+          >
 
             <option value="">
               Selecciona una opción
@@ -351,9 +442,11 @@
 
 
 
+        <!-- MENSAJE -->
+
         <div class="ht-field">
 
-          <label>
+          <label for="mensaje">
 
             Mensaje
 
@@ -365,14 +458,18 @@
 
 
           <textarea
+            id="mensaje"
             name="mensaje"
-            placeholder="¿Como podemos ayudarte?"
+            rows="7"
+            placeholder="¿Qué está ocurriendo y qué te gustaría mejorar?"
             required
           ></textarea>
 
         </div>
 
 
+
+        <!-- FOOTER FORM -->
 
         <div class="ht-form-footer">
 
@@ -382,8 +479,8 @@
 
 
           <button
-            class="ht-submit"
             type="submit"
+            class="ht-submit"
           >
             Enviar consulta
           </button>
@@ -396,6 +493,7 @@
 
     </div>
 
+
   </div>
 
 </section>
@@ -405,16 +503,22 @@
 
 
 
+<!-- FOOTER -->
+
 <footer class="ht-footer">
 
   <div class="ht-shell">
+
 
     <div class="ht-footer-grid">
 
 
       <div class="ht-footer-brand">
 
-        <a href="../" class="ht-footer-logo">
+        <a
+          href="../"
+          class="ht-footer-logo"
+        >
 
           HIE<span class="rr">RR</span>O
           TO<span class="rr">RR</span>ECILLA
@@ -430,8 +534,10 @@
         </h3>
 
         <p>
+
           Estrategia, gestión y tecnología para empresas
           que quieren avanzar con claridad.
+
         </p>
 
       </div>
@@ -506,21 +612,23 @@
 
       <div class="ht-footer-legal">
 
-        <a href="#">
+        <a href="../aviso-legal/">
           Aviso legal
         </a>
 
-        <a href="#">
+        <a href="../privacidad/">
           Privacidad
         </a>
 
-        <a href="#">
+        <a href="../cookies/">
           Cookies
         </a>
 
       </div>
 
+
     </div>
+
 
   </div>
 
@@ -529,6 +637,7 @@
 
 
 <button
+  type="button"
   class="ht-backtotop"
   id="htBackToTop"
   aria-label="Volver arriba"
