@@ -3116,3 +3116,18 @@ h3 span {
   }
 
 }
+.ht-approach--hybrid .ht-chip {
+
+  background:
+    rgba(159,227,224,.10);
+
+  border:
+    1px solid rgba(159,227,224,.28);
+
+  color:
+    #9FE3E0;
+
+  font-weight:
+    720;
+
+}
