@@ -13,10 +13,8 @@ document.addEventListener(
       );
 
     if (year) {
-
       year.textContent =
         new Date().getFullYear();
-
     }
 
 
@@ -86,7 +84,7 @@ document.addEventListener(
 
 
     /* ================================================
-       REVEAL
+       ANIMACIONES AL HACER SCROLL
        ================================================ */
 
     const revealElements =
@@ -117,6 +115,7 @@ document.addEventListener(
                     .add(
                       "is-visible"
                     );
+
 
                   observer
                     .unobserve(
@@ -164,7 +163,7 @@ document.addEventListener(
 
 
     /* ================================================
-       MENU MOBILE
+       MENÚ MOBILE
        ================================================ */
 
     const menuButton =
@@ -181,23 +180,33 @@ document.addEventListener(
 
     function closeMenu() {
 
-      if (!menuButton || !mobileMenu) {
+      if (
+        !menuButton ||
+        !mobileMenu
+      ) {
         return;
       }
 
 
-      menuButton.classList.remove(
-        "is-open"
-      );
+      menuButton
+        .classList
+        .remove(
+          "is-open"
+        );
 
-      mobileMenu.classList.remove(
-        "is-open"
-      );
 
-      menuButton.setAttribute(
-        "aria-expanded",
-        "false"
-      );
+      mobileMenu
+        .classList
+        .remove(
+          "is-open"
+        );
+
+
+      menuButton
+        .setAttribute(
+          "aria-expanded",
+          "false"
+        );
 
     }
 
@@ -227,10 +236,11 @@ document.addEventListener(
             );
 
 
-          menuButton.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-          );
+          menuButton
+            .setAttribute(
+              "aria-expanded",
+              String(isOpen)
+            );
 
         }
       );
@@ -266,6 +276,73 @@ document.addEventListener(
       );
 
     }
+
+
+
+    /* ================================================
+       ESC PARA CERRAR MENÚ MOBILE
+       ================================================ */
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.key === "Escape"
+        ) {
+
+          closeMenu();
+
+        }
+
+      }
+    );
+
+
+
+    /* ================================================
+       CERRAR MENÚ SI SE HACE CLIC FUERA
+       ================================================ */
+
+    document.addEventListener(
+      "click",
+      function (event) {
+
+        if (
+          !menuButton ||
+          !mobileMenu
+        ) {
+          return;
+        }
+
+
+        const clickedInsideMenu =
+          mobileMenu.contains(
+            event.target
+          );
+
+
+        const clickedButton =
+          menuButton.contains(
+            event.target
+          );
+
+
+        if (
+          mobileMenu.classList.contains(
+            "is-open"
+          ) &&
+          !clickedInsideMenu &&
+          !clickedButton
+        ) {
+
+          closeMenu();
+
+        }
+
+      }
+    );
+
 
   }
 );
