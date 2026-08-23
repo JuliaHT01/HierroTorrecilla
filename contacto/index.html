@@ -36,7 +36,9 @@
 <body>
 
 
-<!-- HEADER -->
+<!-- ==================================================
+     HEADER
+     ================================================== -->
 
 <header class="ht-header">
 
@@ -46,6 +48,7 @@
     <a
       href="../"
       class="ht-brand"
+      aria-label="Hierro Torrecilla - Inicio"
     >
 
       HIE<span class="rr-special">RR</span>O
@@ -55,7 +58,10 @@
 
 
 
-    <nav class="ht-menu">
+    <nav
+      class="ht-menu"
+      aria-label="Navegación principal"
+    >
 
       <a href="../">
         Inicio
@@ -98,6 +104,10 @@
 
 
 
+<!-- ==================================================
+     MENÚ MOBILE
+     ================================================== -->
+
 <nav
   class="ht-mobile-menu"
   id="htMobileMenu"
@@ -116,7 +126,7 @@
     Metodología
   </a>
 
-  <a href="../contacto/">
+  <a href="./">
     Contacto
   </a>
 
@@ -126,6 +136,10 @@
 
 <main class="ht-contact-page">
 
+
+<!-- ==================================================
+     CONTACTO
+     ================================================== -->
 
 <section class="ht-contact-wrap">
 
@@ -169,6 +183,7 @@
           Cuéntanos tu reto
         </p>
 
+
         <p>
 
           No necesitas tener la solución definida.
@@ -181,7 +196,9 @@
 
 
 
-      <!-- SEÑALES DE CONFIANZA -->
+      <!-- ==================================================
+           SEÑALES DE CONFIANZA
+           ================================================== -->
 
       <div class="ht-contact-trust">
 
@@ -201,7 +218,9 @@
 
 
 
-      <!-- FORMULARIO -->
+      <!-- ==================================================
+           FORMULARIO
+           ================================================== -->
 
       <form
 
@@ -220,7 +239,9 @@
 
 
 
-        <!-- NOMBRE + EMPRESA -->
+        <!-- ==================================================
+             NOMBRE + EMPRESA
+             ================================================== -->
 
         <div class="ht-form-row">
 
@@ -279,7 +300,9 @@
 
 
 
-        <!-- EMAIL + TELÉFONO -->
+        <!-- ==================================================
+             EMAIL + TELÉFONO
+             ================================================== -->
 
         <div class="ht-form-row">
 
@@ -338,7 +361,9 @@
 
 
 
-        <!-- TAMAÑO -->
+        <!-- ==================================================
+             TAMAÑO
+             ================================================== -->
 
         <div class="ht-field">
 
@@ -384,13 +409,15 @@
 
 
 
-        <!-- SERVICIO -->
+        <!-- ==================================================
+             SERVICIO
+             ================================================== -->
 
         <div class="ht-field">
 
           <label for="servicio">
 
-            ¿En qué podemos ayudarte?
+            ¿Qué area de especialización crees que encaja mejor con tu reto?
 
             <span class="ht-optional">
               Opcional
@@ -442,7 +469,9 @@
 
 
 
-        <!-- MENSAJE -->
+        <!-- ==================================================
+             MENSAJE
+             ================================================== -->
 
         <div class="ht-field">
 
@@ -461,7 +490,7 @@
             id="mensaje"
             name="mensaje"
             rows="7"
-            placeholder="¿Qué está ocurriendo y qué te gustaría mejorar?"
+            placeholder="¿En qué podemos ayudarte?"
             required
           ></textarea>
 
@@ -469,9 +498,39 @@
 
 
 
-        <!-- FOOTER FORM -->
+        <!-- ==================================================
+             PRIVACIDAD
+             ================================================== -->
+
+        <label class="ht-privacy">
+
+          <input
+            type="checkbox"
+            name="privacidad"
+            value="aceptada"
+            required
+          >
+
+          <span>
+
+            He leído y acepto la
+
+            <a href="../privacidad/">
+              Política de Privacidad
+            </a>.
+
+          </span>
+
+        </label>
+
+
+
+        <!-- ==================================================
+             FOOTER FORM
+             ================================================== -->
 
         <div class="ht-form-footer">
+
 
           <small>
             * Campos obligatorios
@@ -484,6 +543,7 @@
           >
             Enviar consulta
           </button>
+
 
         </div>
 
@@ -503,7 +563,9 @@
 
 
 
-<!-- FOOTER -->
+<!-- ==================================================
+     FOOTER
+     ================================================== -->
 
 <footer class="ht-footer">
 
@@ -515,6 +577,7 @@
 
       <div class="ht-footer-brand">
 
+
         <a
           href="../"
           class="ht-footer-logo"
@@ -525,46 +588,57 @@
 
         </a>
 
+
         <small>
           Consultoría Empresarial
         </small>
+
 
         <h3>
           Rigor y Resultados.
         </h3>
 
+
         <p>
 
-          Estrategia, gestión y tecnología para empresas
-          que quieren avanzar con claridad.
+          Estrategia, gestión y tecnología
+          para empresas que quieren avanzar
+          con claridad.
 
         </p>
+
 
       </div>
 
 
 
       <div class="ht-footer-col">
+
 
         <strong>
           Navegación
         </strong>
 
+
         <a href="../">
           Inicio
         </a>
+
 
         <a href="../servicios/">
           Servicios
         </a>
 
+
         <a href="../metodologia/">
           Metodología
         </a>
 
+
         <a href="./">
           Contacto
         </a>
+
 
       </div>
 
@@ -572,21 +646,26 @@
 
       <div class="ht-footer-col">
 
+
         <strong>
           Contacto
         </strong>
+
 
         <a href="mailto:info@hierrotorrecilla.es">
           info@hierrotorrecilla.es
         </a>
 
+
         <a href="tel:+34611561535">
           +34 611 561 535
         </a>
 
+
         <p>
           Madrid · La Rioja
         </p>
+
 
       </div>
 
@@ -596,6 +675,7 @@
 
 
     <div class="ht-footer-bottom">
+
 
       <span>
 
@@ -610,19 +690,24 @@
       </span>
 
 
+
       <div class="ht-footer-legal">
+
 
         <a href="../aviso-legal/">
           Aviso legal
         </a>
 
+
         <a href="../privacidad/">
           Privacidad
         </a>
 
+
         <a href="../cookies/">
           Cookies
         </a>
+
 
       </div>
 
@@ -636,6 +721,10 @@
 
 
 
+<!-- ==================================================
+     VOLVER ARRIBA
+     ================================================== -->
+
 <button
   type="button"
   class="ht-backtotop"
@@ -645,6 +734,11 @@
   ↑
 </button>
 
+
+
+<!-- ==================================================
+     JAVASCRIPT
+     ================================================== -->
 
 <script src="../assets/js/main.js"></script>
 
