@@ -2,10 +2,9 @@ document.addEventListener(
   "DOMContentLoaded",
   function () {
 
-
-    /* ================================================
+    /* ==================================================
        AÑO FOOTER
-       ================================================ */
+       ================================================== */
 
     const year =
       document.getElementById(
@@ -19,22 +18,18 @@ document.addEventListener(
 
 
 
-    /* ================================================
+    /* ==================================================
        VOLVER ARRIBA
-       ================================================ */
+       ================================================== */
 
     const backToTop =
       document.getElementById(
         "htBackToTop"
       );
 
-
     function updateBackToTop() {
 
-      if (!backToTop) {
-        return;
-      }
-
+      if (!backToTop) return;
 
       if (window.scrollY > 420) {
 
@@ -52,15 +47,11 @@ document.addEventListener(
 
     }
 
-
     window.addEventListener(
       "scroll",
       updateBackToTop,
-      {
-        passive: true
-      }
+      { passive: true }
     );
-
 
     updateBackToTop();
 
@@ -83,9 +74,9 @@ document.addEventListener(
 
 
 
-    /* ================================================
-       ANIMACIONES AL HACER SCROLL
-       ================================================ */
+    /* ==================================================
+       SCROLL REVEAL
+       ================================================== */
 
     const revealElements =
       document.querySelectorAll(
@@ -98,7 +89,7 @@ document.addEventListener(
       in window
     ) {
 
-      const observer =
+      const revealObserver =
         new IntersectionObserver(
 
           function (entries) {
@@ -116,8 +107,7 @@ document.addEventListener(
                       "is-visible"
                     );
 
-
-                  observer
+                  revealObserver
                     .unobserve(
                       entry.target
                     );
@@ -130,7 +120,9 @@ document.addEventListener(
           },
 
           {
-            threshold: .12
+            threshold: .12,
+            rootMargin:
+              "0px 0px -45px 0px"
           }
 
         );
@@ -139,7 +131,7 @@ document.addEventListener(
       revealElements.forEach(
         function (element) {
 
-          observer.observe(
+          revealObserver.observe(
             element
           );
 
@@ -162,15 +154,14 @@ document.addEventListener(
 
 
 
-    /* ================================================
+    /* ==================================================
        MENÚ MOBILE
-       ================================================ */
+       ================================================== */
 
     const menuButton =
       document.getElementById(
         "htMenuToggle"
       );
-
 
     const mobileMenu =
       document.getElementById(
@@ -183,30 +174,21 @@ document.addEventListener(
       if (
         !menuButton ||
         !mobileMenu
-      ) {
-        return;
-      }
+      ) return;
 
 
-      menuButton
-        .classList
-        .remove(
-          "is-open"
-        );
+      menuButton.classList.remove(
+        "is-open"
+      );
 
+      mobileMenu.classList.remove(
+        "is-open"
+      );
 
-      mobileMenu
-        .classList
-        .remove(
-          "is-open"
-        );
-
-
-      menuButton
-        .setAttribute(
-          "aria-expanded",
-          "false"
-        );
+      menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
 
     }
 
@@ -236,11 +218,10 @@ document.addEventListener(
             );
 
 
-          menuButton
-            .setAttribute(
-              "aria-expanded",
-              String(isOpen)
-            );
+          menuButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
 
         }
       );
@@ -249,6 +230,7 @@ document.addEventListener(
       mobileMenu
         .querySelectorAll("a")
         .forEach(
+
           function (link) {
 
             link.addEventListener(
@@ -257,6 +239,7 @@ document.addEventListener(
             );
 
           }
+
         );
 
 
@@ -265,7 +248,8 @@ document.addEventListener(
         function () {
 
           if (
-            window.innerWidth > 760
+            window.innerWidth >
+            760
           ) {
 
             closeMenu();
@@ -279,16 +263,13 @@ document.addEventListener(
 
 
 
-    /* ================================================
-       ESC PARA CERRAR MENÚ MOBILE
-       ================================================ */
-
     document.addEventListener(
       "keydown",
       function (event) {
 
         if (
-          event.key === "Escape"
+          event.key ===
+          "Escape"
         ) {
 
           closeMenu();
@@ -299,11 +280,6 @@ document.addEventListener(
     );
 
 
-
-    /* ================================================
-       CERRAR MENÚ SI SE HACE CLIC FUERA
-       ================================================ */
-
     document.addEventListener(
       "click",
       function (event) {
@@ -311,16 +287,13 @@ document.addEventListener(
         if (
           !menuButton ||
           !mobileMenu
-        ) {
-          return;
-        }
+        ) return;
 
 
         const clickedInsideMenu =
           mobileMenu.contains(
             event.target
           );
-
 
         const clickedButton =
           menuButton.contains(
@@ -329,9 +302,11 @@ document.addEventListener(
 
 
         if (
-          mobileMenu.classList.contains(
-            "is-open"
-          ) &&
+          mobileMenu
+            .classList
+            .contains(
+              "is-open"
+            ) &&
           !clickedInsideMenu &&
           !clickedButton
         ) {
@@ -343,6 +318,115 @@ document.addEventListener(
       }
     );
 
+
+
+    /* ==================================================
+       SERVICIOS - ITEM ACTIVO
+       ================================================== */
+
+    const serviceSections =
+      document.querySelectorAll(
+        ".ht-service-block[id]"
+      );
+
+    const serviceLinks =
+      document.querySelectorAll(
+        ".ht-services-index a"
+      );
+
+
+    if (
+      serviceSections.length &&
+      serviceLinks.length &&
+      "IntersectionObserver"
+      in window
+    ) {
+
+      const serviceObserver =
+        new IntersectionObserver(
+
+          function (entries) {
+
+            entries.forEach(
+              function (entry) {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  const id =
+                    entry.target.id;
+
+
+                  serviceLinks.forEach(
+                    function (link) {
+
+                      const active =
+                        link.getAttribute(
+                          "href"
+                        ) ===
+                        "#" + id;
+
+
+                      link.classList.toggle(
+                        "is-active",
+                        active
+                      );
+
+                    }
+                  );
+
+
+                  const activeLink =
+                    document.querySelector(
+                      '.ht-services-index a[href="#' +
+                      id +
+                      '"]'
+                    );
+
+
+                  if (
+                    activeLink &&
+                    window.innerWidth <=
+                    760
+                  ) {
+
+                    activeLink.scrollIntoView({
+                      behavior: "smooth",
+                      inline: "center",
+                      block: "nearest"
+                    });
+
+                  }
+
+                }
+
+              }
+            );
+
+          },
+
+          {
+            rootMargin:
+              "-38% 0px -48% 0px",
+
+            threshold: 0
+          }
+
+        );
+
+
+      serviceSections.forEach(
+        function (section) {
+
+          serviceObserver.observe(
+            section
+          );
+
+        }
+      );
+
+    }
 
   }
 );
