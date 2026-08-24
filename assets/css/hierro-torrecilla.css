@@ -51,19 +51,12 @@ body {
   overflow-x: hidden;
 }
 
-
-/* RETÍCULA */
-
 body::before {
   content: "";
-
   position: fixed;
   inset: 0;
-
   z-index: -1;
-
   pointer-events: none;
-
   opacity: .20;
 
   background-image:
@@ -79,7 +72,6 @@ body::before {
 
   background-size: 32px 32px;
 }
-
 
 a {
   color: inherit;
@@ -161,7 +153,7 @@ button {
   display: flex;
   align-items: center;
 
-  gap: 29px;
+  gap: 25px;
 
   margin-left: auto;
 
@@ -411,6 +403,15 @@ button {
   padding: 118px 0;
 }
 
+.ht-section--soft {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(229,240,237,.72),
+      rgba(242,247,245,.88)
+    );
+}
+
 .ht-section-title {
   margin: 0;
 
@@ -517,7 +518,8 @@ button {
 
   flex: 0 0 auto;
 
-  transition: transform .2s ease;
+  transition:
+    transform .2s ease;
 }
 
 .ht-btn-primary:hover {
@@ -615,9 +617,6 @@ button {
     );
 }
 
-
-/* CÍRCULO DERECHO GRANDE */
-
 .ht-home-hero::before {
   content: "";
 
@@ -634,18 +633,15 @@ button {
   border:
     1px solid rgba(31,165,163,.24);
 
-  box-shadow:
-    inset 0 0 100px
-    rgba(31,165,163,.04);
-
   pointer-events: none;
 
   animation:
-    htFloatLarge 12s ease-in-out infinite alternate;
+    htFloatLarge
+    12s
+    ease-in-out
+    infinite
+    alternate;
 }
-
-
-/* CÍRCULO DERECHO INTERIOR */
 
 .ht-home-hero::after {
   content: "";
@@ -666,11 +662,21 @@ button {
   pointer-events: none;
 
   animation:
-    htFloatSmall 9s ease-in-out infinite alternate;
+    htFloatSmall
+    9s
+    ease-in-out
+    infinite
+    alternate;
 }
 
+.ht-home-hero__inner {
+  position: relative;
 
-/* DETALLE IZQUIERDO */
+  z-index: 2;
+
+  padding:
+    95px 0 100px;
+}
 
 .ht-home-hero__inner::before {
   content: "";
@@ -698,9 +704,6 @@ button {
   pointer-events: none;
 }
 
-
-/* ELEMENTO ABSTRACTO DERECHO */
-
 .ht-home-hero__inner::after {
   content: "";
 
@@ -726,85 +729,14 @@ button {
   border:
     1px solid rgba(31,165,163,.14);
 
-  box-shadow:
-    inset 0 0 70px
-    rgba(255,255,255,.10);
-
   pointer-events: none;
 
   animation:
-    htMorph 11s ease-in-out infinite alternate;
-}
-
-
-@keyframes htFloatLarge {
-
-  from {
-    transform:
-      translate3d(0,0,0)
-      rotate(0);
-  }
-
-  to {
-    transform:
-      translate3d(-24px,28px,0)
-      rotate(8deg);
-  }
-
-}
-
-
-@keyframes htFloatSmall {
-
-  from {
-    transform:
-      translateY(0);
-  }
-
-  to {
-    transform:
-      translateY(30px);
-  }
-
-}
-
-
-@keyframes htMorph {
-
-  0% {
-
-    transform:
-      rotate(-8deg)
-      translateY(0);
-
-    border-radius:
-      36% 64% 58% 42% /
-      55% 42% 58% 45%;
-
-  }
-
-  100% {
-
-    transform:
-      rotate(7deg)
-      translateY(22px);
-
-    border-radius:
-      59% 41% 37% 63% /
-      42% 59% 41% 58%;
-
-  }
-
-}
-
-
-.ht-home-hero__inner {
-  position: relative;
-
-  z-index: 2;
-
-  padding:
-    95px 0 100px;
+    htMorph
+    11s
+    ease-in-out
+    infinite
+    alternate;
 }
 
 .ht-brandline {
@@ -1077,6 +1009,185 @@ button {
 
 
 /* ======================================================
+   PROBLEMAS / ¿TE RESULTA FAMILIAR?
+   ====================================================== */
+
+.ht-problem-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap: 14px;
+}
+
+.ht-problem-card {
+  position: relative;
+
+  min-height: 190px;
+
+  display: grid;
+
+  grid-template-columns:
+    55px 1fr;
+
+  gap: 22px;
+
+  padding: 28px;
+
+  border:
+    1px solid rgba(23,63,66,.09);
+
+  border-radius: 24px;
+
+  background:
+    rgba(255,255,255,.76);
+
+  box-shadow:
+    0 13px 38px rgba(23,63,66,.045);
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    box-shadow .25s ease;
+}
+
+.ht-problem-card:hover {
+  transform: translateY(-5px);
+
+  background: #FFFFFF;
+
+  box-shadow:
+    0 22px 50px rgba(23,63,66,.09);
+}
+
+.ht-problem-card__num {
+  color: var(--ht-teal-dark);
+
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.ht-problem-card p {
+  margin: 0;
+
+  color: var(--ht-ink);
+
+  font-size:
+    clamp(1.15rem,1.8vw,1.5rem);
+
+  font-weight: 520;
+  line-height: 1.42;
+}
+
+
+/* ======================================================
+   POR QUÉ HIERRO TORRECILLA
+   ====================================================== */
+
+.ht-why {
+  background:
+    radial-gradient(
+      circle at 86% 10%,
+      rgba(159,227,224,.13),
+      transparent 28%
+    ),
+    var(--ht-dark);
+
+  color: #FFFFFF;
+}
+
+.ht-why .ht-kicker {
+  color: var(--ht-mint);
+}
+
+.ht-why .ht-section-title {
+  color: #FFFFFF;
+}
+
+.ht-why .ht-section-title span {
+  color: var(--ht-mint);
+}
+
+.ht-why .ht-section-head > p {
+  color:
+    rgba(255,255,255,.64);
+}
+
+.ht-why-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5,1fr);
+
+  gap: 12px;
+}
+
+.ht-why-card {
+  min-height: 290px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px;
+
+  border:
+    1px solid rgba(255,255,255,.09);
+
+  border-radius: 23px;
+
+  background:
+    rgba(255,255,255,.055);
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    border-color .25s ease;
+}
+
+.ht-why-card:hover {
+  transform: translateY(-6px);
+
+  background:
+    rgba(255,255,255,.09);
+
+  border-color:
+    rgba(159,227,224,.24);
+}
+
+.ht-why-card span {
+  color: var(--ht-mint);
+
+  font-size: .69rem;
+  font-weight: 900;
+}
+
+.ht-why-card h3 {
+  margin:
+    auto 0 12px;
+
+  color: #FFFFFF;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.ht-why-card p {
+  min-height: 5.6em;
+
+  margin: 0;
+
+  color:
+    rgba(255,255,255,.63);
+
+  font-size: .84rem;
+  line-height: 1.55;
+}
+
+
+/* ======================================================
    HOME METODOLOGÍA
    ====================================================== */
 
@@ -1274,7 +1385,6 @@ button {
 
 /* ======================================================
    PAGE HERO
-   SERVICIOS + METODOLOGÍA
    ====================================================== */
 
 .ht-page-hero {
@@ -1311,9 +1421,6 @@ button {
     );
 }
 
-
-/* DETALLE IZQUIERDO */
-
 .ht-page-hero::before {
   content: "";
 
@@ -1340,9 +1447,6 @@ button {
   pointer-events: none;
 }
 
-
-/* GRAN CÍRCULO DERECHO */
-
 .ht-page-hero::after {
   content: "";
 
@@ -1359,19 +1463,18 @@ button {
   border:
     1px solid rgba(31,165,163,.20);
 
-  box-shadow:
-    inset 0 0 80px
-    rgba(31,165,163,.035);
-
   pointer-events: none;
 
   animation:
-    htFloatSmall 10s ease-in-out infinite alternate;
+    htFloatSmall
+    10s
+    ease-in-out
+    infinite
+    alternate;
 }
 
 .ht-page-hero .ht-shell {
   position: relative;
-
   z-index: 2;
 }
 
@@ -1389,17 +1492,12 @@ button {
 
 
 /* ======================================================
-   SERVICIOS - ZONA STICKY
+   SERVICIOS
    ====================================================== */
 
 .ht-services-zone {
   position: relative;
 }
-
-
-/* ======================================================
-   SERVICIOS - NAVEGACIÓN STICKY
-   ====================================================== */
 
 .ht-services-nav-wrap {
   position: sticky;
@@ -1496,11 +1594,6 @@ button {
   color: var(--ht-mint);
 }
 
-
-/* ======================================================
-   SERVICIO INDIVIDUAL
-   ====================================================== */
-
 .ht-service-block {
   padding: 44px 0;
 
@@ -1550,7 +1643,6 @@ button {
   position: absolute;
 
   left: 0;
-
   top: 45px;
   bottom: 45px;
 
@@ -1576,8 +1668,7 @@ button {
   display: flex;
   flex-direction: column;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 }
 
 .ht-service-side strong {
@@ -1599,8 +1690,7 @@ button {
 
   writing-mode: vertical-rl;
 
-  transform:
-    rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .ht-service-main h2 {
@@ -1656,14 +1746,12 @@ button {
   border:
     1px solid rgba(31,165,163,.15);
 
-  border-radius:
-    999px;
+  border-radius: 999px;
 
   background:
     rgba(31,165,163,.08);
 
-  color:
-    #315E60;
+  color: #315E60;
 
   font-size: .76rem;
   font-weight: 720;
@@ -1850,14 +1938,12 @@ button {
   font-weight: 850;
   letter-spacing: .13em;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 }
 
 .ht-approach--hybrid
 .ht-approach__tag {
-  color:
-    var(--ht-mint);
+  color: var(--ht-mint);
 }
 
 .ht-approach h3 {
@@ -1888,14 +1974,6 @@ button {
   color: var(--ht-mint);
 }
 
-
-/*
- * IMPORTANTE:
- * Ambos enfoques reservan la misma altura para el texto.
- * De esta forma la primera fila de chips comienza exactamente
- * a la misma altura en las dos tarjetas.
- */
-
 .ht-approach > p {
   min-height: 7.4em;
 
@@ -1912,14 +1990,6 @@ button {
   color:
     rgba(255,255,255,.72);
 }
-
-
-/*
- * No usamos margin-top:auto.
- * Si se utilizara, se alinearía la PARTE INFERIOR
- * del grupo de chips y, al tener Negocio dos filas,
- * sus burbujas empezarían más arriba que las de Híbrido.
- */
 
 .ht-approach .ht-chip-row {
   margin-top: 0;
@@ -2093,20 +2163,10 @@ button {
   line-height: 1.58;
 }
 
-
-/* ======================================================
-   FLEXIBILIDAD
-   ====================================================== */
-
 .ht-flexibility-section {
   padding:
     30px 0 108px;
 }
-
-
-/* ======================================================
-   RIESGO / ESCALADO
-   ====================================================== */
 
 .ht-risk-rail {
   display: grid;
@@ -2168,6 +2228,181 @@ button {
 
 
 /* ======================================================
+   LA FIRMA
+   ====================================================== */
+
+.ht-firm-intro {
+  padding:
+    110px 0;
+
+  background: #FFFFFF;
+}
+
+.ht-firm-intro__grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0,.8fr)
+    minmax(0,1.2fr);
+
+  gap: 90px;
+
+  align-items: start;
+}
+
+.ht-firm-intro__copy {
+  max-width: 760px;
+}
+
+.ht-firm-intro__copy p {
+  margin:
+    0 0 22px;
+
+  color: var(--ht-muted);
+
+  font-size: 1.04rem;
+  line-height: 1.78;
+}
+
+.ht-firm-manifesto {
+  padding:
+    110px 0;
+
+  background:
+    var(--ht-dark);
+
+  color: #FFFFFF;
+}
+
+.ht-firm-manifesto .ht-kicker {
+  color: var(--ht-mint);
+}
+
+.ht-firm-manifesto .ht-section-title {
+  color: #FFFFFF;
+}
+
+.ht-firm-manifesto .ht-section-title span {
+  color: var(--ht-mint);
+}
+
+.ht-principle-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 14px;
+
+  margin-top: 60px;
+}
+
+.ht-principle-card {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px;
+
+  border:
+    1px solid rgba(255,255,255,.09);
+
+  border-radius: 24px;
+
+  background:
+    rgba(255,255,255,.055);
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.ht-principle-card:hover {
+  transform: translateY(-6px);
+
+  background:
+    rgba(255,255,255,.09);
+}
+
+.ht-principle-card span {
+  color: var(--ht-mint);
+
+  font-size: .7rem;
+  font-weight: 900;
+}
+
+.ht-principle-card h3 {
+  margin:
+    auto 0 14px;
+
+  color: #FFFFFF;
+
+  font-size: 1.65rem;
+  font-weight: 560;
+}
+
+.ht-principle-card p {
+  margin: 0;
+
+  color:
+    rgba(255,255,255,.64);
+
+  line-height: 1.62;
+}
+
+.ht-presence {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 18px;
+
+  margin-top: 46px;
+}
+
+.ht-presence-card {
+  padding: 32px;
+
+  border:
+    1px solid rgba(23,63,66,.08);
+
+  border-radius: 24px;
+
+  background: #FFFFFF;
+
+  box-shadow:
+    0 14px 40px rgba(23,63,66,.055);
+}
+
+.ht-presence-card span {
+  color: var(--ht-teal-dark);
+
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+}
+
+.ht-presence-card h3 {
+  margin:
+    28px 0 12px;
+
+  font-size: 1.65rem;
+}
+
+.ht-presence-card p {
+  margin: 0;
+
+  color: var(--ht-muted);
+
+  line-height: 1.65;
+}
+
+
+/* ======================================================
    CONTACTO
    ====================================================== */
 
@@ -2206,8 +2441,7 @@ button {
   background:
     rgba(255,255,255,.78);
 
-  backdrop-filter:
-    blur(18px);
+  backdrop-filter: blur(18px);
 
   box-shadow:
     0 28px 80px rgba(23,63,66,.10);
@@ -2247,11 +2481,47 @@ button {
   background:
     rgba(31,165,163,.07);
 
-  color:
-    #496967;
+  color: #496967;
 
   font-size: .72rem;
   font-weight: 720;
+}
+
+
+/* QUÉ PASA DESPUÉS */
+
+.ht-next-step {
+  margin:
+    0 0 38px;
+
+  padding: 22px 24px;
+
+  border:
+    1px solid rgba(31,165,163,.14);
+
+  border-radius: 18px;
+
+  background:
+    rgba(31,165,163,.06);
+}
+
+.ht-next-step strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--ht-teal-dark);
+
+  font-size: .82rem;
+}
+
+.ht-next-step p {
+  margin: 0;
+
+  color: var(--ht-muted);
+
+  font-size: .84rem;
+  line-height: 1.6;
 }
 
 .ht-form-row {
@@ -2366,7 +2636,8 @@ button {
 
   margin-top: 2px;
 
-  accent-color: var(--ht-teal-dark);
+  accent-color:
+    var(--ht-teal-dark);
 }
 
 .ht-privacy a {
@@ -2437,9 +2708,11 @@ button {
 }
 
 .ht-submit:hover {
-  background: var(--ht-dark-hover);
+  background:
+    var(--ht-dark-hover);
 
-  transform: translateY(-3px);
+  transform:
+    translateY(-3px);
 
   box-shadow:
     0 18px 38px rgba(23,63,66,.22);
@@ -2457,8 +2730,7 @@ button {
   background:
     var(--ht-dark);
 
-  color:
-    #FFFFFF;
+  color: #FFFFFF;
 }
 
 .ht-footer-grid {
@@ -2518,8 +2790,7 @@ button {
 
   margin-bottom: 18px;
 
-  color:
-    var(--ht-mint);
+  color: var(--ht-mint);
 
   font-size: .78rem;
   letter-spacing: .12em;
@@ -2571,7 +2842,7 @@ button {
 
 
 /* ======================================================
-   SCROLL REVEAL
+   ANIMACIONES
    ====================================================== */
 
 [data-reveal] {
@@ -2613,6 +2884,46 @@ button {
 
 [data-delay="3"] {
   transition-delay: .24s;
+}
+
+@keyframes htFloatLarge {
+  from {
+    transform:
+      translate3d(0,0,0)
+      rotate(0);
+  }
+
+  to {
+    transform:
+      translate3d(-24px,28px,0)
+      rotate(8deg);
+  }
+}
+
+@keyframes htFloatSmall {
+  from {
+    transform:
+      translateY(0);
+  }
+
+  to {
+    transform:
+      translateY(30px);
+  }
+}
+
+@keyframes htMorph {
+  0% {
+    transform:
+      rotate(-8deg)
+      translateY(0);
+  }
+
+  100% {
+    transform:
+      rotate(7deg)
+      translateY(22px);
+  }
 }
 
 
@@ -2664,7 +2975,8 @@ button {
 @media (max-width:1000px) {
 
   .ht-section-head,
-  .ht-project-box__head {
+  .ht-project-box__head,
+  .ht-firm-intro__grid {
     grid-template-columns: 1fr;
   }
 
@@ -2676,6 +2988,15 @@ button {
   .ht-service-tile {
     grid-column:
       span 6 !important;
+  }
+
+  .ht-problem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ht-why-grid {
+    grid-template-columns:
+      repeat(2,1fr);
   }
 
   .ht-method-rail,
@@ -2694,11 +3015,6 @@ button {
       1fr;
   }
 
-  /*
-   * Cuando las tarjetas de enfoque ya están una debajo
-   * de otra no necesitamos forzar la altura de los textos.
-   */
-
   .ht-approach > p,
   .ht-approach--hybrid > p {
     min-height: auto;
@@ -2708,6 +3024,10 @@ button {
   .ht-project-flow--4 {
     grid-template-columns:
       repeat(2,1fr);
+  }
+
+  .ht-principle-grid {
+    grid-template-columns: 1fr;
   }
 
 }
@@ -2752,22 +3072,6 @@ button {
       68px 0 76px;
   }
 
-  .ht-home-hero__inner::before {
-    width: 310px;
-    height: 310px;
-
-    left: -235px;
-    bottom: -130px;
-  }
-
-  .ht-home-hero__inner::after {
-    width: 190px;
-    height: 190px;
-
-    right: -85px;
-    top: 20%;
-  }
-
   .ht-home-hero {
     background:
       radial-gradient(
@@ -2808,14 +3112,6 @@ button {
       );
   }
 
-  .ht-page-hero::before {
-    width: 300px;
-    height: 300px;
-
-    left: -230px;
-    bottom: -180px;
-  }
-
   .ht-display {
     font-size:
       clamp(3.55rem,17vw,6.1rem);
@@ -2853,13 +3149,27 @@ button {
     min-height: auto;
   }
 
+  .ht-problem-card {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .ht-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ht-why-card {
+    min-height: 235px;
+  }
+
   .ht-method-rail,
   .ht-method-core__grid {
     grid-template-columns: 1fr;
   }
 
 
-  /* STICKY SERVICES MOBILE */
+  /* SERVICIOS STICKY */
 
   .ht-services-nav-wrap {
     top: 70px;
@@ -2923,7 +3233,7 @@ button {
   }
 
 
-  /* ENFOQUES MOBILE */
+  /* ENFOQUES */
 
   .ht-approach {
     min-height: auto;
@@ -2945,6 +3255,7 @@ button {
 
   .ht-approach .ht-chip-row {
     margin-top: 0;
+
     padding-top: 28px;
   }
 
@@ -2987,6 +3298,26 @@ button {
   .ht-risk-rail {
     grid-template-columns:
       1fr 1fr;
+  }
+
+
+  /* FIRMA */
+
+  .ht-firm-intro {
+    padding:
+      82px 0;
+  }
+
+  .ht-firm-intro__grid {
+    gap: 38px;
+  }
+
+  .ht-principle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ht-presence {
+    grid-template-columns: 1fr;
   }
 
 
@@ -3043,7 +3374,8 @@ button {
 @media (prefers-reduced-motion: reduce) {
 
   html {
-    scroll-behavior: auto !important;
+    scroll-behavior:
+      auto !important;
   }
 
   *,
@@ -3060,9 +3392,11 @@ button {
   }
 
   [data-reveal] {
-    opacity: 1 !important;
+    opacity:
+      1 !important;
 
-    transform: none !important;
+    transform:
+      none !important;
   }
 
 }
