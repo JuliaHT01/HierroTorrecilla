@@ -1793,6 +1793,8 @@ button {
     repeat(2,minmax(0,1fr));
 
   gap: 22px;
+
+  align-items: stretch;
 }
 
 .ht-approach {
@@ -1886,8 +1888,16 @@ button {
   color: var(--ht-mint);
 }
 
+
+/*
+ * IMPORTANTE:
+ * Ambos enfoques reservan la misma altura para el texto.
+ * De esta forma la primera fila de chips comienza exactamente
+ * a la misma altura en las dos tarjetas.
+ */
+
 .ht-approach > p {
-  min-height: 6em;
+  min-height: 7.4em;
 
   margin: 0;
 
@@ -1897,12 +1907,22 @@ button {
 }
 
 .ht-approach--hybrid > p {
+  min-height: 7.4em;
+
   color:
     rgba(255,255,255,.72);
 }
 
+
+/*
+ * No usamos margin-top:auto.
+ * Si se utilizara, se alinearía la PARTE INFERIOR
+ * del grupo de chips y, al tener Negocio dos filas,
+ * sus burbujas empezarían más arriba que las de Híbrido.
+ */
+
 .ht-approach .ht-chip-row {
-  margin-top: auto;
+  margin-top: 0;
 
   padding-top: 34px;
 }
@@ -2674,6 +2694,16 @@ button {
       1fr;
   }
 
+  /*
+   * Cuando las tarjetas de enfoque ya están una debajo
+   * de otra no necesitamos forzar la altura de los textos.
+   */
+
+  .ht-approach > p,
+  .ht-approach--hybrid > p {
+    min-height: auto;
+  }
+
   .ht-project-flow,
   .ht-project-flow--4 {
     grid-template-columns:
@@ -2892,6 +2922,9 @@ button {
     transform: none;
   }
 
+
+  /* ENFOQUES MOBILE */
+
   .ht-approach {
     min-height: auto;
 
@@ -2905,9 +2938,18 @@ button {
     margin-top: 62px;
   }
 
-  .ht-approach > p {
+  .ht-approach > p,
+  .ht-approach--hybrid > p {
     min-height: auto;
   }
+
+  .ht-approach .ht-chip-row {
+    margin-top: 0;
+    padding-top: 28px;
+  }
+
+
+  /* PROYECTOS */
 
   .ht-projects {
     padding:
@@ -2947,6 +2989,9 @@ button {
       1fr 1fr;
   }
 
+
+  /* CONTACTO */
+
   .ht-contact-wrap {
     padding:
       70px 0 86px;
@@ -2970,6 +3015,9 @@ button {
   .ht-submit {
     width: 100%;
   }
+
+
+  /* FOOTER */
 
   .ht-footer-grid {
     grid-template-columns: 1fr;
