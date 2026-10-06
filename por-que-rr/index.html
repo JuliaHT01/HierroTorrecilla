@@ -30,6 +30,41 @@
     href="../assets/css/hierro-torrecilla.css"
   >
 
+
+  <!-- ==================================================
+       AJUSTES ESPECÍFICOS DE ESTA PÁGINA
+       ================================================== -->
+
+  <style>
+
+    /*
+     * Reducimos exclusivamente el espacio entre
+     * "Escalar con criterio" y la CTA final.
+     */
+
+    .ht-rr-projects {
+      padding-bottom: 46px;
+    }
+
+    .ht-rr-final-cta {
+      padding-top: 28px;
+    }
+
+
+    @media (max-width: 760px) {
+
+      .ht-rr-projects {
+        padding-bottom: 32px;
+      }
+
+      .ht-rr-final-cta {
+        padding-top: 18px;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
@@ -607,7 +642,7 @@
      ESCALAR CON CRITERIO
      ================================================== -->
 
-<section class="ht-projects">
+<section class="ht-projects ht-rr-projects">
 
   <div class="ht-shell">
 
@@ -765,10 +800,10 @@
 
 
 <!-- ==================================================
-     CTA
+     CTA FINAL
      ================================================== -->
 
-<section class="ht-section">
+<section class="ht-section ht-rr-final-cta">
 
   <div class="ht-shell">
 
@@ -929,6 +964,11 @@
 </footer>
 
 
+
+<!-- ==================================================
+     VOLVER ARRIBA
+     ================================================== -->
+
 <button
   type="button"
   class="ht-backtotop"
@@ -938,6 +978,11 @@
   ↑
 </button>
 
+
+
+<!-- ==================================================
+     JAVASCRIPT
+     ================================================== -->
 
 <script src="../assets/js/main.js"></script>
 
