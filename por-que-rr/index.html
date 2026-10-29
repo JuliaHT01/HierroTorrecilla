@@ -17,7 +17,7 @@
 
   <meta
     name="description"
-    content="Descubre el enfoque Rigor y Resultados de Hierro Torrecilla: análisis, priorización, negocio, tecnología y transformación con criterio."
+    content="Conoce el modelo de Hierro Torrecilla: Rigor y Resultados, interlocución directa, equipos a medida y una red de más de 50 expertos y especialistas."
   >
 
   <link
@@ -31,34 +31,1021 @@
   >
 
 
-  <!-- ==================================================
-       AJUSTES ESPECÍFICOS DE ESTA PÁGINA
-       ================================================== -->
-
   <style>
 
-    /*
-     * Reducimos exclusivamente el espacio entre
-     * "Escalar con criterio" y la CTA final.
-     */
+    /* ==================================================
+       POR QUÉ RR
+       ================================================== */
 
-    .ht-rr-projects {
-      padding-bottom: 46px;
+    .ht-rr-page {
+      overflow: hidden;
     }
 
-    .ht-rr-final-cta {
-      padding-top: 28px;
+
+    /* ==================================================
+       HERO
+       ================================================== */
+
+    .ht-rr-hero {
+      position: relative;
+    }
+
+    .ht-rr-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .ht-rr-hero__note {
+      color: var(--ht-muted);
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+
+    /* ==================================================
+       DATOS / CREDIBILIDAD
+       ================================================== */
+
+    .ht-rr-stats {
+      position: relative;
+      z-index: 3;
+      margin-top: -28px;
+      padding-bottom: 96px;
+    }
+
+    .ht-rr-stats__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      border: 1px solid rgba(23, 63, 66, .10);
+      border-radius: 26px;
+      background: rgba(255,255,255,.94);
+      box-shadow: 0 24px 65px rgba(23,63,66,.10);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .ht-rr-stat {
+      position: relative;
+      min-height: 158px;
+      padding: 30px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .ht-rr-stat + .ht-rr-stat {
+      border-left: 1px solid var(--ht-line);
+    }
+
+    .ht-rr-stat strong {
+      color: var(--ht-dark);
+      font-size: clamp(2.3rem, 4vw, 4.2rem);
+      line-height: .9;
+      letter-spacing: -.06em;
+    }
+
+    .ht-rr-stat strong span {
+      color: var(--ht-teal);
+    }
+
+    .ht-rr-stat p {
+      max-width: 190px;
+      margin: 22px 0 0;
+      color: var(--ht-muted);
+      font-size: .88rem;
+      line-height: 1.5;
+    }
+
+
+    /* ==================================================
+       FUNDADORA
+       ================================================== */
+
+    .ht-founder-section {
+      padding: 30px 0 118px;
+    }
+
+    .ht-founder {
+      display: grid;
+      grid-template-columns: minmax(340px, .88fr) minmax(0, 1.12fr);
+      gap: 72px;
+      align-items: center;
+    }
+
+    .ht-founder__visual {
+      position: relative;
+    }
+
+    .ht-founder__photo {
+      position: relative;
+      min-height: 590px;
+      overflow: hidden;
+      border-radius: 32px;
+      background:
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(159,227,224,.32),
+          transparent 30%
+        ),
+        linear-gradient(
+          145deg,
+          #214D50 0%,
+          #173F42 55%,
+          #0F6E73 100%
+        );
+      box-shadow: 0 30px 70px rgba(23,63,66,.18);
+    }
+
+    .ht-founder__photo::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      right: -140px;
+      top: -120px;
+      border: 1px solid rgba(159,227,224,.24);
+      border-radius: 50%;
+    }
+
+    .ht-founder__photo::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      left: -100px;
+      bottom: -80px;
+      border: 1px solid rgba(159,227,224,.16);
+      border-radius: 50%;
+    }
+
+    .ht-founder__initials {
+      position: absolute;
+      left: 34px;
+      bottom: 30px;
+      z-index: 1;
+      color: rgba(255,255,255,.12);
+      font-size: clamp(5rem, 10vw, 9rem);
+      font-weight: 900;
+      line-height: .8;
+      letter-spacing: -.08em;
+    }
+
+    .ht-founder__photo img {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .ht-founder__badge {
+      position: absolute;
+      right: -25px;
+      bottom: 38px;
+      z-index: 4;
+      width: 185px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.65);
+      border-radius: 20px;
+      background: rgba(255,255,255,.94);
+      box-shadow: 0 18px 45px rgba(23,63,66,.14);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+
+    .ht-founder__badge span {
+      display: block;
+      color: var(--ht-teal-dark);
+      font-size: .65rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .ht-founder__badge strong {
+      display: block;
+      margin-top: 8px;
+      color: var(--ht-dark);
+      font-size: .95rem;
+      line-height: 1.35;
+    }
+
+    .ht-founder__content {
+      max-width: 700px;
+    }
+
+    .ht-founder__name {
+      margin: 14px 0 0;
+      color: var(--ht-ink);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: .96;
+      letter-spacing: -.055em;
+    }
+
+    .ht-founder__role {
+      margin: 18px 0 0;
+      color: var(--ht-teal-dark);
+      font-size: .83rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .ht-founder__bio {
+      margin-top: 30px;
+    }
+
+    .ht-founder__bio p {
+      margin: 0 0 19px;
+      color: var(--ht-muted);
+      font-size: 1.02rem;
+      line-height: 1.78;
+    }
+
+    .ht-founder__skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .ht-founder__skill {
+      padding: 9px 13px;
+      border: 1px solid var(--ht-line);
+      border-radius: 999px;
+      background: var(--ht-bg-soft);
+      color: var(--ht-dark);
+      font-size: .74rem;
+      font-weight: 800;
+    }
+
+    .ht-founder__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .ht-linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 0 18px;
+      border: 1px solid var(--ht-line);
+      border-radius: 999px;
+      color: var(--ht-dark);
+      font-size: .82rem;
+      font-weight: 850;
+      text-decoration: none;
+      transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+    }
+
+    .ht-linkedin-link:hover {
+      background: var(--ht-dark);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+
+    /* ==================================================
+       RED DE EXPERTOS
+       ================================================== */
+
+    .ht-experts-section {
+      position: relative;
+      padding: 118px 0;
+      overflow: hidden;
+      background: var(--ht-dark);
+    }
+
+    .ht-experts-section::before {
+      content: "";
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      right: -300px;
+      top: -270px;
+      border: 1px solid rgba(159,227,224,.14);
+      border-radius: 50%;
+    }
+
+    .ht-experts-section::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      left: -240px;
+      bottom: -240px;
+      border: 1px solid rgba(159,227,224,.10);
+      border-radius: 50%;
+    }
+
+    .ht-experts-section .ht-shell {
+      position: relative;
+      z-index: 2;
+    }
+
+    .ht-experts-section .ht-kicker {
+      color: var(--ht-mint);
+    }
+
+    .ht-experts-section .ht-section-title {
+      color: #FFFFFF;
+    }
+
+    .ht-experts-section .ht-section-title span {
+      color: var(--ht-mint);
+    }
+
+    .ht-experts-section .ht-section-head > p {
+      color: rgba(255,255,255,.68);
+    }
+
+
+    /* RED VISUAL */
+
+    .ht-expert-network {
+      position: relative;
+      min-height: 620px;
+      max-width: 1040px;
+      margin: 72px auto 0;
+    }
+
+    .ht-expert-network::before {
+      content: "";
+      position: absolute;
+      inset: 72px 150px;
+      border: 1px solid rgba(159,227,224,.13);
+      border-radius: 50%;
+    }
+
+    .ht-expert-network::after {
+      content: "";
+      position: absolute;
+      inset: 150px 260px;
+      border: 1px solid rgba(159,227,224,.09);
+      border-radius: 50%;
+    }
+
+    .ht-network-core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 4;
+      width: 250px;
+      height: 250px;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(159,227,224,.38);
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle at 35% 25%,
+          rgba(159,227,224,.18),
+          transparent 38%
+        ),
+        rgba(255,255,255,.045);
+      box-shadow:
+        0 0 0 25px rgba(159,227,224,.025),
+        0 24px 80px rgba(0,0,0,.20);
+      backdrop-filter: blur(12px);
+    }
+
+    .ht-network-core strong {
+      color: #FFFFFF;
+      font-size: 4.5rem;
+      line-height: .9;
+      letter-spacing: -.07em;
+    }
+
+    .ht-network-core strong span {
+      color: var(--ht-mint);
+    }
+
+    .ht-network-core p {
+      max-width: 150px;
+      margin: 14px 0 0;
+      color: rgba(255,255,255,.68);
+      text-align: center;
+      font-size: .74rem;
+      font-weight: 800;
+      line-height: 1.45;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .ht-network-node {
+      position: absolute;
+      z-index: 3;
+      min-width: 150px;
+      padding: 16px 20px;
+      border: 1px solid rgba(159,227,224,.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,.055);
+      color: #FFFFFF;
+      text-align: center;
+      font-size: .78rem;
+      font-weight: 850;
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+      backdrop-filter: blur(12px);
+      transition:
+        background .22s ease,
+        border-color .22s ease,
+        transform .22s ease;
+    }
+
+    .ht-network-node:hover {
+      background: rgba(159,227,224,.13);
+      border-color: rgba(159,227,224,.40);
+      transform: translateY(-4px);
+    }
+
+    .ht-node-1 {
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .ht-node-1:hover {
+      transform: translateX(-50%) translateY(-4px);
+    }
+
+    .ht-node-2 {
+      top: 20%;
+      right: 5%;
+    }
+
+    .ht-node-3 {
+      top: 48%;
+      right: 0;
+    }
+
+    .ht-node-4 {
+      right: 10%;
+      bottom: 10%;
+    }
+
+    .ht-node-5 {
+      bottom: 2%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .ht-node-5:hover {
+      transform: translateX(-50%) translateY(-4px);
+    }
+
+    .ht-node-6 {
+      left: 10%;
+      bottom: 10%;
+    }
+
+    .ht-node-7 {
+      top: 48%;
+      left: 0;
+    }
+
+    .ht-node-8 {
+      top: 20%;
+      left: 5%;
+    }
+
+
+    /* TRES PILARES */
+
+    .ht-network-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .ht-network-pillar {
+      min-height: 210px;
+      padding: 30px;
+      border: 1px solid rgba(159,227,224,.17);
+      border-radius: 24px;
+      background: rgba(255,255,255,.045);
+    }
+
+    .ht-network-pillar span {
+      color: var(--ht-mint);
+      font-size: .67rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .ht-network-pillar h3 {
+      margin: 24px 0 0;
+      color: #FFFFFF;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+
+    .ht-network-pillar p {
+      margin: 17px 0 0;
+      color: rgba(255,255,255,.62);
+      font-size: .91rem;
+      line-height: 1.7;
+    }
+
+
+    /* ==================================================
+       MODELO BOUTIQUE
+       ================================================== */
+
+    .ht-boutique-section {
+      padding: 118px 0;
+    }
+
+    .ht-boutique-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 52px;
+    }
+
+    .ht-boutique-card {
+      position: relative;
+      min-height: 280px;
+      padding: 28px;
+      overflow: hidden;
+      border: 1px solid var(--ht-line);
+      border-radius: 23px;
+      background: #FFFFFF;
+      transition:
+        transform .23s ease,
+        box-shadow .23s ease,
+        border-color .23s ease;
+    }
+
+    .ht-boutique-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(31,165,163,.28);
+      box-shadow: 0 22px 48px rgba(23,63,66,.08);
+    }
+
+    .ht-boutique-card__num {
+      color: var(--ht-teal-dark);
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+    }
+
+    .ht-boutique-card h3 {
+      margin: 62px 0 0;
+      color: var(--ht-ink);
+      font-size: 1.4rem;
+      line-height: 1.1;
+      letter-spacing: -.025em;
+    }
+
+    .ht-boutique-card p {
+      margin: 18px 0 0;
+      color: var(--ht-muted);
+      font-size: .9rem;
+      line-height: 1.68;
+    }
+
+
+    /* ==================================================
+       METODOLOGÍA REDUCIDA
+       ================================================== */
+
+    .ht-rr-method {
+      padding: 110px 0;
+      background: var(--ht-bg-soft);
+    }
+
+    .ht-rr-method__flow {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 56px;
+    }
+
+    .ht-rr-method__flow::before {
+      content: "";
+      position: absolute;
+      top: 27px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: rgba(15,110,115,.20);
+    }
+
+    .ht-rr-method-step {
+      position: relative;
+      z-index: 2;
+      padding: 0 22px;
+      text-align: center;
+    }
+
+    .ht-rr-method-step__number {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(15,110,115,.18);
+      border-radius: 50%;
+      background: var(--ht-bg-soft);
+      color: var(--ht-teal-dark);
+      font-size: .72rem;
+      font-weight: 900;
+    }
+
+    .ht-rr-method-step h3 {
+      margin: 20px 0 0;
+      color: var(--ht-dark);
+      font-size: 1.2rem;
+    }
+
+    .ht-rr-method-step p {
+      max-width: 210px;
+      margin: 12px auto 0;
+      color: var(--ht-muted);
+      font-size: .85rem;
+      line-height: 1.6;
+    }
+
+
+    /* ==================================================
+       CLIENTES + COLABORADORES
+       ================================================== */
+
+    .ht-dual-cta {
+      padding: 112px 0 124px;
+    }
+
+    .ht-dual-cta__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 50px;
+    }
+
+    .ht-dual-card {
+      min-height: 370px;
+      padding: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 28px;
+    }
+
+    .ht-dual-card--client {
+      background: var(--ht-dark);
+    }
+
+    .ht-dual-card--expert {
+      border: 1px solid var(--ht-line);
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(31,165,163,.13),
+          transparent 32%
+        ),
+        #FFFFFF;
+    }
+
+    .ht-dual-card__label {
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .ht-dual-card--client .ht-dual-card__label {
+      color: var(--ht-mint);
+    }
+
+    .ht-dual-card--expert .ht-dual-card__label {
+      color: var(--ht-teal-dark);
+    }
+
+    .ht-dual-card h3 {
+      max-width: 460px;
+      margin: 34px 0 0;
+      font-size: clamp(2rem, 3.6vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -.05em;
+    }
+
+    .ht-dual-card--client h3 {
+      color: #FFFFFF;
+    }
+
+    .ht-dual-card--expert h3 {
+      color: var(--ht-dark);
+    }
+
+    .ht-dual-card p {
+      max-width: 500px;
+      margin: 22px 0 0;
+      font-size: .97rem;
+      line-height: 1.7;
+    }
+
+    .ht-dual-card--client p {
+      color: rgba(255,255,255,.66);
+    }
+
+    .ht-dual-card--expert p {
+      color: var(--ht-muted);
+    }
+
+    .ht-dual-card__action {
+      margin-top: 38px;
+    }
+
+    .ht-dual-card--client .ht-btn-primary {
+      background: #FFFFFF;
+      color: var(--ht-dark);
+    }
+
+
+    /* ==================================================
+       MOBILE / TABLET
+       ================================================== */
+
+    @media (max-width: 1050px) {
+
+      .ht-rr-stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ht-rr-stat:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid var(--ht-line);
+      }
+
+      .ht-rr-stat:nth-child(4) {
+        border-top: 1px solid var(--ht-line);
+      }
+
+      .ht-founder {
+        grid-template-columns: .9fr 1.1fr;
+        gap: 50px;
+      }
+
+      .ht-founder__photo {
+        min-height: 520px;
+      }
+
+      .ht-boutique-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 820px) {
+
+      .ht-founder {
+        grid-template-columns: 1fr;
+      }
+
+      .ht-founder__visual {
+        max-width: 580px;
+      }
+
+      .ht-founder__photo {
+        min-height: 650px;
+      }
+
+      .ht-founder__badge {
+        right: 22px;
+      }
+
+      .ht-expert-network {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 48px;
+      }
+
+      .ht-expert-network::before,
+      .ht-expert-network::after {
+        display: none;
+      }
+
+      .ht-network-core {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        grid-column: 1 / -1;
+        width: 220px;
+        height: 220px;
+        margin: 0 auto 25px;
+      }
+
+      .ht-network-node {
+        position: static;
+        min-width: 0;
+        transform: none !important;
+      }
+
+      .ht-network-pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .ht-rr-method__flow {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px 10px;
+      }
+
+      .ht-rr-method__flow::before {
+        display: none;
+      }
+
+      .ht-dual-cta__grid {
+        grid-template-columns: 1fr;
+      }
+
     }
 
 
     @media (max-width: 760px) {
 
-      .ht-rr-projects {
-        padding-bottom: 32px;
+      .ht-rr-stats {
+        margin-top: -18px;
+        padding-bottom: 72px;
       }
 
-      .ht-rr-final-cta {
-        padding-top: 18px;
+      .ht-rr-stats__grid {
+        grid-template-columns: 1fr 1fr;
+        border-radius: 20px;
+      }
+
+      .ht-rr-stat {
+        min-height: 135px;
+        padding: 22px 18px;
+      }
+
+      .ht-rr-stat strong {
+        font-size: 2.55rem;
+      }
+
+      .ht-rr-stat p {
+        font-size: .78rem;
+      }
+
+      .ht-founder-section {
+        padding: 20px 0 82px;
+      }
+
+      .ht-founder__photo {
+        min-height: 490px;
+        border-radius: 24px;
+      }
+
+      .ht-founder__badge {
+        right: 16px;
+        bottom: 18px;
+        width: 168px;
+        padding: 18px;
+      }
+
+      .ht-founder__name {
+        font-size: 2.75rem;
+      }
+
+      .ht-experts-section {
+        padding: 82px 0;
+      }
+
+      .ht-expert-network {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .ht-network-node {
+        padding: 13px 10px;
+        font-size: .69rem;
+      }
+
+      .ht-network-core {
+        width: 190px;
+        height: 190px;
+      }
+
+      .ht-network-core strong {
+        font-size: 3.7rem;
+      }
+
+      .ht-network-pillars {
+        margin-top: 22px;
+      }
+
+      .ht-network-pillar {
+        min-height: 0;
+        padding: 25px;
+      }
+
+      .ht-boutique-section {
+        padding: 82px 0;
+      }
+
+      .ht-boutique-grid {
+        grid-template-columns: 1fr;
+        margin-top: 36px;
+      }
+
+      .ht-boutique-card {
+        min-height: 230px;
+      }
+
+      .ht-boutique-card h3 {
+        margin-top: 42px;
+      }
+
+      .ht-rr-method {
+        padding: 82px 0;
+      }
+
+      .ht-rr-method__flow {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 42px;
+      }
+
+      .ht-rr-method-step {
+        padding: 0 8px;
+      }
+
+      .ht-dual-cta {
+        padding: 82px 0 90px;
+      }
+
+      .ht-dual-cta__grid {
+        margin-top: 36px;
+      }
+
+      .ht-dual-card {
+        min-height: 335px;
+        padding: 30px 25px;
+        border-radius: 23px;
+      }
+
+    }
+
+
+    @media (max-width: 430px) {
+
+      .ht-rr-stats__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ht-rr-stat + .ht-rr-stat,
+      .ht-rr-stat:nth-child(3),
+      .ht-rr-stat:nth-child(4) {
+        border-left: 0;
+        border-top: 1px solid var(--ht-line);
+      }
+
+      .ht-rr-stat {
+        min-height: 118px;
+      }
+
+      .ht-founder__photo {
+        min-height: 420px;
+      }
+
+      .ht-founder__badge {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: auto;
+        margin: -55px 18px 0;
+      }
+
+      .ht-expert-network {
+        grid-template-columns: 1fr;
+      }
+
+      .ht-network-core {
+        grid-column: auto;
+      }
+
+      .ht-rr-method__flow {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
 
     }
@@ -70,10 +1057,6 @@
 
 <body>
 
-
-<!-- ==================================================
-     HEADER
-     ================================================== -->
 
 <header class="ht-header">
 
@@ -144,10 +1127,6 @@
 
 
 
-<!-- ==================================================
-     MENÚ MÓVIL
-     ================================================== -->
-
 <nav
   class="ht-mobile-menu"
   id="htMobileMenu"
@@ -182,14 +1161,14 @@
 
 
 
-<main>
+<main class="ht-rr-page">
 
 
 <!-- ==================================================
      HERO
      ================================================== -->
 
-<section class="ht-page-hero">
+<section class="ht-page-hero ht-rr-hero">
 
   <div class="ht-shell">
 
@@ -220,12 +1199,31 @@
       data-delay="2"
     >
 
-      RR resume nuestra forma de entender la consultoría:
-      comprender antes de actuar, cuestionar antes de invertir
-      y transformar únicamente aquello que puede generar
-      un resultado real para el negocio.
+      Una estructura boutique, interlocución directa
+      y una red de más de 50 expertos y especialistas
+      para configurar alrededor de cada reto
+      las capacidades que realmente necesita.
 
     </p>
+
+    <div
+      class="ht-rr-hero__actions"
+      data-reveal
+      data-delay="3"
+    >
+
+      <a
+        href="../contacto/"
+        class="ht-btn ht-btn-primary"
+      >
+        Cuéntanos tu reto
+      </a>
+
+      <span class="ht-rr-hero__note">
+        Negocio · Procesos · Datos · Tecnología
+      </span>
+
+    </div>
 
   </div>
 
@@ -234,7 +1232,429 @@
 
 
 <!-- ==================================================
-     QUÉ SIGNIFICA RR
+     DATOS CLAVE
+     ================================================== -->
+
+<section class="ht-rr-stats">
+
+  <div class="ht-shell">
+
+    <div
+      class="ht-rr-stats__grid"
+      data-reveal
+    >
+
+      <article class="ht-rr-stat">
+
+        <strong>
+          <span>+</span>50
+        </strong>
+
+        <p>
+          expertos y especialistas
+          en nuestra red profesional.
+        </p>
+
+      </article>
+
+
+      <article class="ht-rr-stat">
+
+        <strong>
+          1
+        </strong>
+
+        <p>
+          interlocución directa
+          para coordinar cada proyecto.
+        </p>
+
+      </article>
+
+
+      <article class="ht-rr-stat">
+
+        <strong>
+          6
+        </strong>
+
+        <p>
+          áreas de servicio conectadas
+          alrededor del negocio.
+        </p>
+
+      </article>
+
+
+      <article class="ht-rr-stat">
+
+        <strong>
+          ES
+        </strong>
+
+        <p>
+          alcance nacional con presencia
+          en Madrid y La Rioja.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FUNDADORA
+     ================================================== -->
+
+<section class="ht-founder-section">
+
+  <div class="ht-shell">
+
+    <div class="ht-founder">
+
+
+      <div
+        class="ht-founder__visual"
+        data-reveal="left"
+      >
+
+        <div class="ht-founder__photo">
+
+          <span class="ht-founder__initials">
+            JHT
+          </span>
+
+          <img
+            src="../assets/img/julia-hierro-torrecilla.jpg"
+            alt="Julia Hierro Torrecilla, fundadora de Hierro Torrecilla"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+
+        </div>
+
+
+        <div class="ht-founder__badge">
+
+          <span>
+            Modelo boutique
+          </span>
+
+          <strong>
+            Dirección cercana.
+            Capacidad flexible.
+          </strong>
+
+        </div>
+
+      </div>
+
+
+
+      <div
+        class="ht-founder__content"
+        data-reveal="right"
+      >
+
+        <p class="ht-kicker">
+          Fundadora
+        </p>
+
+        <h2 class="ht-founder__name">
+          Julia Hierro Torrecilla
+        </h2>
+
+        <p class="ht-founder__role">
+          Fundadora y Consultora Principal
+        </p>
+
+
+        <div class="ht-founder__bio">
+
+          <p>
+
+            Julia Hierro Torrecilla lidera Hierro Torrecilla
+            como fundadora y consultora principal,
+            actuando como interlocutora directa
+            en el desarrollo y coordinación de los proyectos.
+
+          </p>
+
+          <p>
+
+            Su perfil combina formación económica
+            con especialización en estrategia,
+            mejora de procesos, transformación empresarial,
+            automatización y toma de decisiones basada en datos.
+
+          </p>
+
+          <p>
+
+            Esta visión permite abordar los retos desde el negocio
+            y conectar, cuando resulta necesario,
+            organización, procesos, tecnología y capacidades
+            especializadas dentro de una misma iniciativa.
+
+          </p>
+
+        </div>
+
+
+        <div class="ht-founder__skills">
+
+          <span class="ht-founder__skill">
+            Estrategia
+          </span>
+
+          <span class="ht-founder__skill">
+            Procesos
+          </span>
+
+          <span class="ht-founder__skill">
+            Transformación
+          </span>
+
+          <span class="ht-founder__skill">
+            Datos
+          </span>
+
+          <span class="ht-founder__skill">
+            Gestión de proyectos
+          </span>
+
+        </div>
+
+
+        <div class="ht-founder__links">
+
+          <a
+            href="https://www.linkedin.com/in/julia-hierro-torrecilla2001008"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ht-linkedin-link"
+          >
+            Ver perfil en LinkedIn ↗
+          </a>
+
+          <a
+            href="../nosotros/"
+            class="ht-linkedin-link"
+          >
+            Conocer Hierro Torrecilla
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     RED DE EXPERTOS
+     ================================================== -->
+
+<section class="ht-experts-section">
+
+  <div class="ht-shell">
+
+
+    <div class="ht-section-head">
+
+      <div data-reveal="left">
+
+        <p class="ht-kicker">
+          Nuestra red
+        </p>
+
+        <h2 class="ht-section-title">
+
+          El conocimiento adecuado.
+
+          <span>
+            Cuando realmente hace falta.
+          </span>
+
+        </h2>
+
+      </div>
+
+
+      <p data-reveal="right">
+
+        No creemos que todos los proyectos necesiten
+        el mismo equipo. Nuestra red profesional permite
+        incorporar capacidades específicas cuando el reto
+        lo requiere, manteniendo una dirección
+        y una interlocución centralizadas.
+
+      </p>
+
+    </div>
+
+
+
+    <div
+      class="ht-expert-network"
+      data-reveal
+    >
+
+
+      <div class="ht-network-core">
+
+        <strong>
+          <span>+</span>50
+        </strong>
+
+        <p>
+          expertos y especialistas
+          en nuestra red
+        </p>
+
+      </div>
+
+
+      <div class="ht-network-node ht-node-1">
+        Estrategia
+      </div>
+
+      <div class="ht-network-node ht-node-2">
+        Finanzas
+      </div>
+
+      <div class="ht-network-node ht-node-3">
+        Datos & BI
+      </div>
+
+      <div class="ht-network-node ht-node-4">
+        Inteligencia artificial
+      </div>
+
+      <div class="ht-network-node ht-node-5">
+        Tecnología
+      </div>
+
+      <div class="ht-network-node ht-node-6">
+        Automatización
+      </div>
+
+      <div class="ht-network-node ht-node-7">
+        Procesos
+      </div>
+
+      <div class="ht-network-node ht-node-8">
+        PMO & Proyectos
+      </div>
+
+
+    </div>
+
+
+
+    <div class="ht-network-pillars">
+
+
+      <article
+        class="ht-network-pillar"
+        data-reveal
+      >
+
+        <span>
+          01 · Núcleo boutique
+        </span>
+
+        <h3>
+          Una dirección clara.
+        </h3>
+
+        <p>
+
+          La coordinación y la relación con la empresa
+          se mantienen centralizadas para conservar
+          coherencia, contexto y responsabilidad
+          durante todo el proyecto.
+
+        </p>
+
+      </article>
+
+
+
+      <article
+        class="ht-network-pillar"
+        data-reveal
+        data-delay="1"
+      >
+
+        <span>
+          02 · Red especializada
+        </span>
+
+        <h3>
+          Más capacidades cuando aportan valor.
+        </h3>
+
+        <p>
+
+          Podemos incorporar profesionales especializados
+          en función de las necesidades reales del reto,
+          sin convertir una estructura grande
+          en un coste permanente.
+
+        </p>
+
+      </article>
+
+
+
+      <article
+        class="ht-network-pillar"
+        data-reveal
+        data-delay="2"
+      >
+
+        <span>
+          03 · Equipos a medida
+        </span>
+
+        <h3>
+          El equipo sigue al problema.
+        </h3>
+
+        <p>
+
+          La combinación de perfiles puede evolucionar
+          según el alcance, la complejidad
+          y las capacidades que cada fase necesite.
+
+        </p>
+
+      </article>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     RIGOR Y RESULTADOS
      ================================================== -->
 
 <section class="ht-section">
@@ -261,12 +1681,13 @@
 
       </div>
 
+
       <p data-reveal="right">
 
-        El rigor permite entender mejor el problema,
-        reducir incertidumbre y tomar decisiones con criterio.
-        Los resultados obligan a convertir ese análisis
-        en cambios concretos y medibles.
+        Rigor para entender antes de decidir.
+        Resultados para convertir el análisis
+        en acciones que puedan aportar
+        un valor real al negocio.
 
       </p>
 
@@ -274,6 +1695,7 @@
 
 
     <div class="ht-approach-grid">
+
 
       <article
         class="ht-approach ht-approach--business"
@@ -304,14 +1726,26 @@
 
         <div class="ht-chip-row">
 
-          <span class="ht-chip">Análisis</span>
-          <span class="ht-chip">Evidencia</span>
-          <span class="ht-chip">Viabilidad</span>
-          <span class="ht-chip">Priorización</span>
+          <span class="ht-chip">
+            Análisis
+          </span>
+
+          <span class="ht-chip">
+            Evidencia
+          </span>
+
+          <span class="ht-chip">
+            Viabilidad
+          </span>
+
+          <span class="ht-chip">
+            Priorización
+          </span>
 
         </div>
 
       </article>
+
 
 
       <article
@@ -336,22 +1770,35 @@
 
         <p>
 
-          Buscamos que las recomendaciones puedan convertirse
-          en acciones, mejoras, herramientas o nuevas formas
-          de trabajar con impacto para la empresa.
+          Buscamos que las recomendaciones
+          puedan convertirse en acciones,
+          mejoras y nuevas formas de trabajar
+          con impacto para la empresa.
 
         </p>
 
         <div class="ht-chip-row">
 
-          <span class="ht-chip">Ejecución</span>
-          <span class="ht-chip">Impacto</span>
-          <span class="ht-chip">Seguimiento</span>
-          <span class="ht-chip">Retorno</span>
+          <span class="ht-chip">
+            Ejecución
+          </span>
+
+          <span class="ht-chip">
+            Impacto
+          </span>
+
+          <span class="ht-chip">
+            Seguimiento
+          </span>
+
+          <span class="ht-chip">
+            Retorno
+          </span>
 
         </div>
 
       </article>
+
 
     </div>
 
@@ -362,22 +1809,180 @@
 
 
 <!-- ==================================================
-     METODOLOGÍA
+     MODELO BOUTIQUE
      ================================================== -->
 
-<section
-  class="ht-method-core"
-  id="metodologia"
->
+<section class="ht-boutique-section">
 
   <div class="ht-shell">
+
 
     <div class="ht-section-head">
 
       <div data-reveal="left">
 
         <p class="ht-kicker">
-          Nuestra metodología
+          Nuestro modelo
+        </p>
+
+        <h2 class="ht-section-title">
+
+          Boutique por diseño.
+
+          <span>
+            Flexible por capacidad.
+          </span>
+
+        </h2>
+
+      </div>
+
+
+      <p data-reveal="right">
+
+        Una estructura ligera permite mantener
+        una relación cercana con la empresa
+        y ampliar capacidades solo cuando
+        el proyecto realmente lo necesita.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="ht-boutique-grid">
+
+
+      <article
+        class="ht-boutique-card"
+        data-reveal
+      >
+
+        <span class="ht-boutique-card__num">
+          01
+        </span>
+
+        <h3>
+          Interlocución directa
+        </h3>
+
+        <p>
+
+          Sin capas innecesarias entre la empresa
+          y quien comprende, coordina
+          y acompaña el proyecto.
+
+        </p>
+
+      </article>
+
+
+
+      <article
+        class="ht-boutique-card"
+        data-reveal
+        data-delay="1"
+      >
+
+        <span class="ht-boutique-card__num">
+          02
+        </span>
+
+        <h3>
+          Especialistas cuando aportan valor
+        </h3>
+
+        <p>
+
+          Incorporamos conocimiento específico
+          cuando el reto necesita una capacidad
+          que complementa al núcleo del proyecto.
+
+        </p>
+
+      </article>
+
+
+
+      <article
+        class="ht-boutique-card"
+        data-reveal
+        data-delay="2"
+      >
+
+        <span class="ht-boutique-card__num">
+          03
+        </span>
+
+        <h3>
+          Negocio antes que herramienta
+        </h3>
+
+        <p>
+
+          Partimos del problema empresarial.
+          Procesos, datos y tecnología
+          se evalúan después como posibles palancas.
+
+        </p>
+
+      </article>
+
+
+
+      <article
+        class="ht-boutique-card"
+        data-reveal
+        data-delay="3"
+      >
+
+        <span class="ht-boutique-card__num">
+          04
+        </span>
+
+        <h3>
+          Alcance adaptado
+        </h3>
+
+        <p>
+
+          Cada proyecto se dimensiona
+          según el problema, la evidencia disponible
+          y el nivel de profundidad necesario.
+
+        </p>
+
+      </article>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     METODOLOGÍA REDUCIDA
+     ================================================== -->
+
+<section
+  class="ht-rr-method"
+  id="metodologia"
+>
+
+  <div class="ht-shell">
+
+
+    <div class="ht-section-head">
+
+      <div data-reveal="left">
+
+        <p class="ht-kicker">
+          Cómo trabajamos
         </p>
 
         <h2 class="ht-section-title">
@@ -392,114 +1997,114 @@
 
       </div>
 
+
       <p data-reveal="right">
 
-        Un marco sencillo para convertir una situación
-        empresarial compleja en decisiones
-        y acciones concretas.
+        Un marco sencillo para pasar
+        de una situación empresarial compleja
+        a prioridades claras y acciones concretas.
 
       </p>
 
     </div>
 
 
-    <div class="ht-method-core__grid">
+
+    <div class="ht-rr-method__flow">
+
 
       <article
-        class="ht-core-card"
+        class="ht-rr-method-step"
         data-reveal
       >
 
-        <span>01</span>
-
-        <div>
-
-          <h3>
-            Entender
-          </h3>
-
-          <p>
-            Contexto, objetivos, datos,
-            personas y realidad operativa.
-          </p>
-
+        <div class="ht-rr-method-step__number">
+          01
         </div>
+
+        <h3>
+          Entender
+        </h3>
+
+        <p>
+          Contexto, objetivos,
+          personas y realidad operativa.
+        </p>
 
       </article>
 
 
+
       <article
-        class="ht-core-card"
+        class="ht-rr-method-step"
         data-reveal
         data-delay="1"
       >
 
-        <span>02</span>
-
-        <div>
-
-          <h3>
-            Analizar
-          </h3>
-
-          <p>
-            Causas, oportunidades,
-            riesgos y capacidad de mejora.
-          </p>
-
+        <div class="ht-rr-method-step__number">
+          02
         </div>
+
+        <h3>
+          Analizar
+        </h3>
+
+        <p>
+          Causas, datos,
+          oportunidades y riesgos.
+        </p>
 
       </article>
 
 
+
       <article
-        class="ht-core-card"
+        class="ht-rr-method-step"
         data-reveal
         data-delay="2"
       >
 
-        <span>03</span>
-
-        <div>
-
-          <h3>
-            Priorizar
-          </h3>
-
-          <p>
-            Impacto, esfuerzo,
-            inversión y retorno esperado.
-          </p>
-
+        <div class="ht-rr-method-step__number">
+          03
         </div>
+
+        <h3>
+          Priorizar
+        </h3>
+
+        <p>
+          Impacto, esfuerzo,
+          viabilidad y retorno.
+        </p>
 
       </article>
 
 
+
       <article
-        class="ht-core-card"
+        class="ht-rr-method-step"
         data-reveal
         data-delay="3"
       >
 
-        <span>04</span>
-
-        <div>
-
-          <h3>
-            Transformar
-          </h3>
-
-          <p>
-            Convertir las prioridades
-            en cambios aplicables al negocio.
-          </p>
-
+        <div class="ht-rr-method-step__number">
+          04
         </div>
+
+        <h3>
+          Transformar
+        </h3>
+
+        <p>
+          Convertir las prioridades
+          en cambios aplicables.
+        </p>
 
       </article>
 
+
     </div>
+
 
   </div>
 
@@ -508,345 +2113,136 @@
 
 
 <!-- ==================================================
-     NEGOCIO VS NEGOCIO + TECNOLOGÍA
+     CLIENTES + COLABORADORES
      ================================================== -->
 
-<section class="ht-approaches">
+<section class="ht-dual-cta">
 
   <div class="ht-shell">
+
 
     <div class="ht-section-head">
 
       <div data-reveal="left">
 
         <p class="ht-kicker">
-          El enfoque adecuado
+          Hablemos
         </p>
 
         <h2 class="ht-section-title">
 
-          No todo problema
+          Cada relación puede
 
           <span>
-            necesita tecnología.
+            empezar de una forma distinta.
           </span>
 
         </h2>
 
       </div>
 
+
       <p data-reveal="right">
 
-        El punto de partida es siempre el negocio.
-        La tecnología, los datos o la automatización
-        se incorporan cuando pueden aportar un valor
-        real a la solución.
+        Tanto si buscas apoyo para un reto empresarial
+        como si eres un profesional especializado
+        interesado en colaborar con nuestra red,
+        queremos conocerte.
 
       </p>
 
     </div>
 
 
-    <div class="ht-approach-grid">
+
+    <div class="ht-dual-cta__grid">
+
 
       <article
-        class="ht-approach ht-approach--business"
+        class="ht-dual-card ht-dual-card--client"
         data-reveal
       >
 
-        <span class="ht-approach__tag">
-          01 · Negocio
-        </span>
+        <div>
 
-        <h3>
-
-          Enfoque
-
-          <span>
-            negocio.
+          <span class="ht-dual-card__label">
+            Para empresas
           </span>
 
-        </h3>
+          <h3>
+            ¿Hay una decisión o un reto que necesitas ordenar?
+          </h3>
 
-        <p>
+          <p>
 
-          Cuando la mejora depende principalmente
-          de decisiones empresariales, organización,
-          procesos, gestión o crecimiento.
+            Podemos empezar entendiendo qué está ocurriendo,
+            qué información existe y dónde puede tener
+            más sentido actuar.
 
-        </p>
+          </p>
 
-        <div class="ht-chip-row">
+        </div>
 
-          <span class="ht-chip">Estrategia</span>
-          <span class="ht-chip">Procesos</span>
-          <span class="ht-chip">Organización</span>
-          <span class="ht-chip">Control de gestión</span>
-          <span class="ht-chip">Crecimiento</span>
+
+        <div class="ht-dual-card__action">
+
+          <a
+            href="../contacto/"
+            class="ht-btn ht-btn-primary"
+          >
+            Cuéntanos tu reto
+          </a>
 
         </div>
 
       </article>
 
 
+
       <article
-        class="ht-approach ht-approach--hybrid"
+        class="ht-dual-card ht-dual-card--expert"
         data-reveal
         data-delay="1"
       >
 
-        <span class="ht-approach__tag">
-          02 · Negocio + Tecnología
-        </span>
+        <div>
 
-        <h3>
-
-          Enfoque
-
-          <span>
-            híbrido.
+          <span class="ht-dual-card__label">
+            Para profesionales
           </span>
 
-        </h3>
+          <h3>
+            ¿Tu especialización puede aportar valor a nuestra red?
+          </h3>
 
-        <p>
+          <p>
 
-          Cuando la tecnología, los datos o la automatización
-          pueden mejorar el resultado, los incorporamos
-          como palancas al servicio de una necesidad
-          previamente identificada.
+            Buscamos conectar con profesionales
+            con conocimiento especializado
+            que puedan complementar nuestros proyectos
+            cuando cada reto lo requiere.
 
-        </p>
+          </p>
 
-        <div class="ht-chip-row">
+        </div>
 
-          <span class="ht-chip">Negocio</span>
-          <span class="ht-chip">Datos</span>
-          <span class="ht-chip">Automatización</span>
-          <span class="ht-chip">Tecnología</span>
-          <span class="ht-chip">IA</span>
+
+        <div class="ht-dual-card__action">
+
+          <a
+            href="mailto:info@hierrotorrecilla.es?subject=Colaborar%20con%20Hierro%20Torrecilla"
+            class="ht-btn ht-btn-secondary"
+          >
+            Colabora con RR
+          </a>
 
         </div>
 
       </article>
 
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ==================================================
-     ESCALAR CON CRITERIO
-     ================================================== -->
-
-<section class="ht-projects ht-rr-projects">
-
-  <div class="ht-shell">
-
-    <div class="ht-section-head">
-
-      <div data-reveal="left">
-
-        <p class="ht-kicker">
-          Escalar con criterio
-        </p>
-
-        <h2 class="ht-section-title">
-
-          Reducir incertidumbre
-
-          <span>
-            antes de aumentar la inversión.
-          </span>
-
-        </h2>
-
-      </div>
-
-      <p data-reveal="right">
-
-        Cuando existe incertidumbre, preferimos avanzar
-        de forma progresiva: generar evidencia,
-        comprobar la viabilidad y aprender antes
-        de ampliar el alcance o comprometer más recursos.
-
-      </p>
 
     </div>
 
-
-    <div
-      class="ht-project-box"
-      data-reveal
-    >
-
-      <div class="ht-project-box__head">
-
-        <h3>
-
-          Validar
-
-          <span>
-            antes de escalar.
-          </span>
-
-        </h3>
-
-        <p>
-
-          El alcance de una iniciativa debe responder
-          a la evidencia disponible y al valor
-          que puede generar para el negocio.
-
-        </p>
-
-      </div>
-
-
-      <div class="ht-project-flow ht-project-flow--4">
-
-
-        <article class="ht-stage">
-
-          <span>01</span>
-
-          <em>
-            Comprender
-          </em>
-
-          <h4>
-            Explorar
-          </h4>
-
-          <p>
-            Entender la oportunidad
-            y sus condicionantes.
-          </p>
-
-        </article>
-
-
-        <article class="ht-stage">
-
-          <span>02</span>
-
-          <em>
-            Contrastar
-          </em>
-
-          <h4>
-            Validar
-          </h4>
-
-          <p>
-            Comprobar viabilidad,
-            impacto e hipótesis clave.
-          </p>
-
-        </article>
-
-
-        <article class="ht-stage">
-
-          <span>03</span>
-
-          <em>
-            Avanzar
-          </em>
-
-          <h4>
-            Implementar
-          </h4>
-
-          <p>
-            Convertir la decisión
-            en una iniciativa ejecutable.
-          </p>
-
-        </article>
-
-
-        <article class="ht-stage">
-
-          <span>04</span>
-
-          <em>
-            Ampliar
-          </em>
-
-          <h4>
-            Escalar
-          </h4>
-
-          <p>
-            Crecer cuando la evidencia
-            justifica seguir avanzando.
-          </p>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ==================================================
-     CTA FINAL
-     ================================================== -->
-
-<section class="ht-section ht-rr-final-cta">
-
-  <div class="ht-shell">
-
-    <div
-      class="ht-impact-box"
-      data-reveal
-    >
-
-      <p class="ht-kicker">
-        Rigor y Resultados
-      </p>
-
-      <h2 class="ht-section-title">
-
-        Entender mejor.
-
-        <span>
-          Decidir mejor.
-        </span>
-
-      </h2>
-
-      <p>
-
-        Si existe una situación empresarial
-        que necesitas ordenar, analizar
-        o transformar, podemos empezar
-        por entenderla.
-
-      </p>
-
-      <div class="ht-actions">
-
-        <a
-          href="../contacto/"
-          class="ht-btn ht-btn-primary"
-        >
-          Hablemos del siguiente paso
-        </a>
-
-      </div>
-
-    </div>
 
   </div>
 
@@ -866,6 +2262,7 @@
   <div class="ht-shell">
 
     <div class="ht-footer-grid">
+
 
       <div class="ht-footer-brand">
 
@@ -894,20 +2291,39 @@
       </div>
 
 
+
       <div class="ht-footer-col">
 
         <strong>
           Navegación
         </strong>
 
-        <a href="../">Inicio</a>
-        <a href="../servicios/">Servicios</a>
-        <a href="./">¿Por qué RR?</a>
-        <a href="../actualidad/">Actualidad</a>
-        <a href="../nosotros/">Nosotros</a>
-        <a href="../contacto/">Contacto</a>
+        <a href="../">
+          Inicio
+        </a>
+
+        <a href="../servicios/">
+          Servicios
+        </a>
+
+        <a href="./">
+          ¿Por qué RR?
+        </a>
+
+        <a href="../actualidad/">
+          Actualidad
+        </a>
+
+        <a href="../nosotros/">
+          Nosotros
+        </a>
+
+        <a href="../contacto/">
+          Contacto
+        </a>
 
       </div>
+
 
 
       <div class="ht-footer-col">
@@ -930,7 +2346,9 @@
 
       </div>
 
+
     </div>
+
 
 
     <div class="ht-footer-bottom">
@@ -940,6 +2358,7 @@
         <span id="htCurrentYear">2026</span>
         Hierro Torrecilla
       </span>
+
 
       <div class="ht-footer-legal">
 
@@ -959,15 +2378,12 @@
 
     </div>
 
+
   </div>
 
 </footer>
 
 
-
-<!-- ==================================================
-     VOLVER ARRIBA
-     ================================================== -->
 
 <button
   type="button"
@@ -979,10 +2395,6 @@
 </button>
 
 
-
-<!-- ==================================================
-     JAVASCRIPT
-     ================================================== -->
 
 <script src="../assets/js/main.js"></script>
 
