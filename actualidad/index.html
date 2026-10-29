@@ -30,6 +30,182 @@
     href="../assets/css/hierro-torrecilla.css"
   >
 
+
+  <style>
+
+    /* ==============================================
+       ACTUALIDAD
+       ============================================== */
+
+    .ht-news-section {
+      padding: 108px 0 120px;
+    }
+
+    .ht-news-featured {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      overflow: hidden;
+      border: 1px solid var(--ht-line);
+      border-radius: 28px;
+      background: var(--ht-white);
+      box-shadow: 0 20px 60px rgba(23, 63, 66, .07);
+    }
+
+    .ht-news-featured__visual {
+      position: relative;
+      min-height: 430px;
+      padding: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(159, 227, 224, .28),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 85% 80%,
+          rgba(31, 165, 163, .20),
+          transparent 34%
+        ),
+        var(--ht-dark);
+    }
+
+    .ht-news-featured__visual::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      right: -150px;
+      top: -130px;
+      border-radius: 50%;
+      border: 1px solid rgba(159, 227, 224, .25);
+    }
+
+    .ht-news-featured__visual::after {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      left: -100px;
+      bottom: -90px;
+      border-radius: 50%;
+      border: 1px solid rgba(159, 227, 224, .16);
+    }
+
+    .ht-news-featured__type {
+      position: relative;
+      z-index: 2;
+      color: var(--ht-mint);
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .ht-news-featured__mark {
+      position: relative;
+      z-index: 2;
+      color: #FFFFFF;
+      font-size: clamp(4rem, 8vw, 7.2rem);
+      line-height: .82;
+      font-weight: 850;
+      letter-spacing: -.07em;
+    }
+
+    .ht-news-featured__mark span {
+      display: block;
+      margin-top: 18px;
+      color: var(--ht-mint);
+      font-size: .9rem;
+      line-height: 1.3;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .ht-news-featured__content {
+      padding: 50px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .ht-news-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-bottom: 22px;
+      color: var(--ht-teal-dark);
+      font-size: .72rem;
+      font-weight: 850;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .ht-news-featured h2 {
+      max-width: 760px;
+      margin: 0;
+      color: var(--ht-ink);
+      font-size: clamp(2rem, 3.5vw, 3.25rem);
+      line-height: 1.03;
+      letter-spacing: -.045em;
+    }
+
+    .ht-news-featured__content > p {
+      max-width: 690px;
+      margin: 26px 0 0;
+      color: var(--ht-muted);
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
+
+    .ht-news-featured .ht-actions {
+      margin-top: 32px;
+    }
+
+    @media (max-width: 900px) {
+
+      .ht-news-featured {
+        grid-template-columns: 1fr;
+      }
+
+      .ht-news-featured__visual {
+        min-height: 300px;
+      }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .ht-news-section {
+        padding: 78px 0 88px;
+      }
+
+      .ht-news-featured {
+        margin-top: 34px;
+        border-radius: 22px;
+      }
+
+      .ht-news-featured__visual {
+        min-height: 245px;
+        padding: 28px;
+      }
+
+      .ht-news-featured__content {
+        padding: 32px 26px 36px;
+      }
+
+      .ht-news-featured h2 {
+        font-size: 2rem;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
@@ -43,13 +219,17 @@
     <a
       href="../"
       class="ht-brand"
+      aria-label="Hierro Torrecilla - Inicio"
     >
       HIE<span class="rr-special">RR</span>O
       TO<span class="rr-special">RR</span>ECILLA
     </a>
 
 
-    <nav class="ht-menu">
+    <nav
+      class="ht-menu"
+      aria-label="Navegación principal"
+    >
 
       <a href="../">
         Inicio
@@ -85,6 +265,7 @@
 
 
     <button
+      type="button"
       class="ht-menu-toggle"
       id="htMenuToggle"
       aria-label="Abrir menú"
@@ -103,6 +284,7 @@
 <nav
   class="ht-mobile-menu"
   id="htMobileMenu"
+  aria-label="Navegación móvil"
 >
 
   <a href="../">Inicio</a>
@@ -118,6 +300,8 @@
 
 <main>
 
+
+<!-- HERO -->
 
 <section class="ht-page-hero">
 
@@ -162,7 +346,9 @@
 
 
 
-<section class="ht-section">
+<!-- PUBLICACIONES -->
+
+<section class="ht-news-section">
 
   <div class="ht-shell">
 
@@ -172,15 +358,15 @@
       <div data-reveal="left">
 
         <p class="ht-kicker">
-          Conocimiento aplicado
+          Últimas publicaciones
         </p>
 
         <h2 class="ht-section-title">
 
-          Menos tendencias.
+          Conocimiento aplicado.
 
           <span>
-            Más criterio.
+            Más criterio para decidir.
           </span>
 
         </h2>
@@ -189,96 +375,96 @@
 
       <p data-reveal="right">
 
-        Este espacio reunirá contenidos propios
-        pensados para analizar problemas empresariales
-        con profundidad y convertir información
-        en decisiones más útiles.
+        Análisis sobre cuestiones que afectan
+        a la gestión y transformación de las empresas,
+        combinando datos, contexto y una perspectiva
+        orientada a la toma de decisiones.
 
       </p>
 
     </div>
 
 
-    <div class="ht-problem-grid">
 
-      <article
-        class="ht-problem-card"
-        data-reveal
-      >
+    <article
+      class="ht-news-featured"
+      data-reveal
+    >
 
-        <span class="ht-problem-card__num">
-          01
+
+      <div class="ht-news-featured__visual">
+
+        <span class="ht-news-featured__type">
+          Tecnología e IA
         </span>
 
-        <p>
-          Artículos y análisis sobre decisiones empresariales.
-        </p>
+        <div class="ht-news-featured__mark">
 
-      </article>
+          IA
 
+          <span>
+            Empresa española · 2026
+          </span>
 
-      <article
-        class="ht-problem-card"
-        data-reveal
-        data-delay="1"
-      >
+        </div>
 
-        <span class="ht-problem-card__num">
-          02
-        </span>
-
-        <p>
-          Estudios propios sobre empresas, mercados y transformación.
-        </p>
-
-      </article>
+      </div>
 
 
-      <article
-        class="ht-problem-card"
-        data-reveal
-      >
 
-        <span class="ht-problem-card__num">
-          03
-        </span>
+      <div class="ht-news-featured__content">
 
-        <p>
-          Guías y recursos prácticos para dirección y gestión.
-        </p>
+        <div class="ht-news-meta">
 
-      </article>
+          <span>
+            Tecnología e IA
+          </span>
+
+          <span>
+            29 octubre 2026
+          </span>
+
+          <span>
+            8 min de lectura
+          </span>
+
+        </div>
 
 
-      <article
-        class="ht-problem-card"
-        data-reveal
-        data-delay="1"
-      >
+        <h2>
 
-        <span class="ht-problem-card__num">
-          04
-        </span>
+          Inteligencia artificial en la empresa española:
+          del uso experimental a los resultados medibles
+
+        </h2>
+
 
         <p>
-          Reflexiones sobre tecnología, datos e IA aplicados al negocio.
+
+          La inteligencia artificial ya forma parte
+          del trabajo cotidiano de muchas empresas españolas.
+          El reto para una pyme no es incorporar más herramientas,
+          sino identificar dónde pueden generar valor
+          y cómo comprobarlo con datos.
+
         </p>
 
-      </article>
 
-    </div>
+        <div class="ht-actions">
+
+          <a
+            href="inteligencia-artificial-empresa-espanola/"
+            class="ht-btn ht-btn-primary"
+          >
+            Leer análisis
+          </a>
+
+        </div>
+
+      </div>
 
 
-    <div class="ht-actions">
-
-      <a
-        href="../contacto/"
-        class="ht-btn ht-btn-primary"
-      >
-        Proponer un tema
-      </a>
-
-    </div>
+    </article>
 
 
   </div>
@@ -325,7 +511,9 @@
 
       <div class="ht-footer-col">
 
-        <strong>Navegación</strong>
+        <strong>
+          Navegación
+        </strong>
 
         <a href="../">Inicio</a>
         <a href="../servicios/">Servicios</a>
@@ -339,7 +527,9 @@
 
       <div class="ht-footer-col">
 
-        <strong>Contacto</strong>
+        <strong>
+          Contacto
+        </strong>
 
         <a href="mailto:info@hierrotorrecilla.es">
           info@hierrotorrecilla.es
