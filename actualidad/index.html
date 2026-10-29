@@ -37,11 +37,27 @@
       padding: 108px 0 120px;
     }
 
+    .ht-news-month {
+      margin-top: 64px;
+    }
+
+    .ht-news-month:first-of-type {
+      margin-top: 52px;
+    }
+
+    .ht-news-month__title {
+      margin: 0 0 22px;
+      color: var(--ht-teal-dark);
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
     .ht-news-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 52px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
     }
 
     .ht-news-card {
@@ -123,7 +139,7 @@
       position: relative;
       z-index: 2;
       color: #FFFFFF;
-      font-size: clamp(2.9rem, 4.7vw, 4.7rem);
+      font-size: clamp(3rem, 5vw, 4.8rem);
       line-height: .86;
       font-weight: 850;
       letter-spacing: -.065em;
@@ -161,7 +177,7 @@
     .ht-news-card h2 {
       margin: 0;
       color: var(--ht-ink);
-      font-size: clamp(1.45rem, 2vw, 1.9rem);
+      font-size: clamp(1.55rem, 2.2vw, 2rem);
       line-height: 1.1;
       letter-spacing: -.038em;
     }
@@ -179,15 +195,6 @@
     }
 
 
-    @media (max-width: 1080px) {
-
-      .ht-news-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-    }
-
-
     @media (max-width: 760px) {
 
       .ht-news-section {
@@ -196,6 +203,13 @@
 
       .ht-news-grid {
         grid-template-columns: 1fr;
+      }
+
+      .ht-news-month {
+        margin-top: 48px;
+      }
+
+      .ht-news-month:first-of-type {
         margin-top: 34px;
       }
 
@@ -210,10 +224,6 @@
 
       .ht-news-card__content {
         padding: 28px 24px 32px;
-      }
-
-      .ht-news-card h2 {
-        font-size: 1.75rem;
       }
 
     }
@@ -245,17 +255,9 @@
       aria-label="Navegación principal"
     >
 
-      <a href="../">
-        Inicio
-      </a>
-
-      <a href="../servicios/">
-        Servicios
-      </a>
-
-      <a href="../por-que-rr/">
-        ¿Por qué RR?
-      </a>
+      <a href="../">Inicio</a>
+      <a href="../servicios/">Servicios</a>
+      <a href="../por-que-rr/">¿Por qué RR?</a>
 
       <a
         href="./"
@@ -264,9 +266,7 @@
         Actualidad
       </a>
 
-      <a href="../nosotros/">
-        Nosotros
-      </a>
+      <a href="../nosotros/">Nosotros</a>
 
       <a
         href="../contacto/"
@@ -298,7 +298,6 @@
 <nav
   class="ht-mobile-menu"
   id="htMobileMenu"
-  aria-label="Navegación móvil"
 >
 
   <a href="../">Inicio</a>
@@ -396,251 +395,389 @@
 
 
 
-    <div class="ht-news-grid">
+    <!-- OCTUBRE 2026 -->
 
+    <section class="ht-news-month">
 
-      <!-- ESTRATEGIA Y PROCESOS -->
+      <p class="ht-news-month__title">
+        Octubre 2026
+      </p>
 
-      <article
-        class="ht-news-card"
-        data-reveal
-      >
+      <div class="ht-news-grid">
 
-        <div class="ht-news-card__visual">
 
-          <span class="ht-news-card__category">
-            Estrategia y procesos
-          </span>
+        <article class="ht-news-card" data-reveal>
 
-          <div class="ht-news-card__mark">
+          <div class="ht-news-card__visual">
 
-            ORDEN
-
-            <span>
-              Estrategia · Procesos · Ejecución
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div class="ht-news-card__content">
-
-          <div class="ht-news-meta">
-
-            <span>
-              Estrategia y procesos
-            </span>
-
-            <span>
-              29 octubre 2026
-            </span>
-
-            <span>
-              7 min
-            </span>
-
-          </div>
-
-
-          <h2>
-
-            Crecer con orden:
-            por qué la estrategia necesita buenos procesos
-
-          </h2>
-
-
-          <p>
-
-            Una estrategia solo genera resultados
-            cuando puede traducirse en decisiones,
-            responsabilidades y procesos
-            que funcionen en el día a día.
-
-          </p>
-
-
-          <div class="ht-actions">
-
-            <a
-              href="crecer-con-orden-estrategia-y-procesos/"
-              class="ht-btn ht-btn-primary"
-            >
-              Leer análisis
-            </a>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- CONSULTORÍA -->
-
-      <article
-        class="ht-news-card"
-        data-reveal
-        data-delay="1"
-      >
-
-        <div class="ht-news-card__visual">
-
-          <span class="ht-news-card__category">
-            Estrategia y gestión
-          </span>
-
-          <div class="ht-news-card__mark">
-
-            PYME
-
-            <span>
-              Decidir · Priorizar · Ejecutar
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div class="ht-news-card__content">
-
-          <div class="ht-news-meta">
-
-            <span>
-              Estrategia y gestión
-            </span>
-
-            <span>
-              29 octubre 2026
-            </span>
-
-            <span>
-              7 min
-            </span>
-
-          </div>
-
-
-          <h2>
-
-            Cuándo necesita una pyme consultoría empresarial
-            y qué valor debe exigir
-
-          </h2>
-
-
-          <p>
-
-            Señales para identificar cuándo una empresa
-            puede beneficiarse de una mirada externa
-            y qué debería esperar de un proyecto
-            de consultoría útil.
-
-          </p>
-
-
-          <div class="ht-actions">
-
-            <a
-              href="cuando-necesita-una-pyme-consultoria-empresarial/"
-              class="ht-btn ht-btn-primary"
-            >
-              Leer análisis
-            </a>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- IA -->
-
-      <article
-        class="ht-news-card"
-        data-reveal
-        data-delay="2"
-      >
-
-        <div class="ht-news-card__visual">
-
-          <span class="ht-news-card__category">
-            Tecnología e IA
-          </span>
-
-          <div class="ht-news-card__mark">
-
-            IA
-
-            <span>
-              Empresa española · 2026
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div class="ht-news-card__content">
-
-          <div class="ht-news-meta">
-
-            <span>
+            <span class="ht-news-card__category">
               Tecnología e IA
             </span>
 
-            <span>
-              29 octubre 2026
-            </span>
+            <div class="ht-news-card__mark">
+              IA
 
-            <span>
-              8 min
-            </span>
-
-          </div>
-
-
-          <h2>
-
-            Inteligencia artificial en la empresa española:
-            del uso experimental a los resultados medibles
-
-          </h2>
-
-
-          <p>
-
-            La cuestión para una pyme no es cuántas
-            herramientas de IA puede incorporar,
-            sino qué problema puede resolver
-            y cómo comprobar el resultado.
-
-          </p>
-
-
-          <div class="ht-actions">
-
-            <a
-              href="inteligencia-artificial-empresa-espanola/"
-              class="ht-btn ht-btn-primary"
-            >
-              Leer análisis
-            </a>
+              <span>
+                Empresa española · 2026
+              </span>
+            </div>
 
           </div>
 
-        </div>
+          <div class="ht-news-card__content">
 
-      </article>
+            <div class="ht-news-meta">
+              <span>Tecnología e IA</span>
+              <span>Octubre 2026</span>
+              <span>8 min</span>
+            </div>
+
+            <h2>
+              Inteligencia artificial en la empresa española:
+              del uso experimental a los resultados medibles
+            </h2>
+
+            <p>
+              La cuestión para una pyme no es cuántas herramientas
+              de IA puede incorporar, sino qué problema puede resolver
+              y cómo comprobar el resultado.
+            </p>
+
+            <div class="ht-actions">
+
+              <a
+                href="inteligencia-artificial-empresa-espanola/"
+                class="ht-btn ht-btn-primary"
+              >
+                Leer análisis
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
 
 
-    </div>
+
+        <article
+          class="ht-news-card"
+          data-reveal
+          data-delay="1"
+        >
+
+          <div class="ht-news-card__visual">
+
+            <span class="ht-news-card__category">
+              Crecimiento
+            </span>
+
+            <div class="ht-news-card__mark">
+              MERCADOS
+
+              <span>
+                Oportunidad · Viabilidad · Escala
+              </span>
+            </div>
+
+          </div>
+
+          <div class="ht-news-card__content">
+
+            <div class="ht-news-meta">
+              <span>Crecimiento</span>
+              <span>Octubre 2026</span>
+              <span>7 min</span>
+            </div>
+
+            <h2>
+              Crecer en nuevos mercados:
+              cómo preparar una expansión que la empresa pueda sostener
+            </h2>
+
+            <p>
+              Encontrar demanda no basta. La empresa necesita comprobar
+              si puede atenderla, con qué costes, a través de qué canal
+              y bajo qué condiciones.
+            </p>
+
+            <div class="ht-actions">
+
+              <a
+                href="crecer-en-nuevos-mercados/"
+                class="ht-btn ht-btn-primary"
+              >
+                Leer análisis
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- SEPTIEMBRE 2026 -->
+
+    <section class="ht-news-month">
+
+      <p class="ht-news-month__title">
+        Septiembre 2026
+      </p>
+
+      <div class="ht-news-grid">
+
+
+        <article class="ht-news-card" data-reveal>
+
+          <div class="ht-news-card__visual">
+
+            <span class="ht-news-card__category">
+              Estrategia y procesos
+            </span>
+
+            <div class="ht-news-card__mark">
+              ORDEN
+
+              <span>
+                Estrategia · Procesos · Ejecución
+              </span>
+            </div>
+
+          </div>
+
+          <div class="ht-news-card__content">
+
+            <div class="ht-news-meta">
+              <span>Estrategia y procesos</span>
+              <span>Septiembre 2026</span>
+              <span>7 min</span>
+            </div>
+
+            <h2>
+              Crecer con orden:
+              por qué la estrategia necesita buenos procesos
+            </h2>
+
+            <p>
+              Una estrategia solo genera resultados
+              cuando puede traducirse en decisiones,
+              responsabilidades y procesos que funcionen
+              en el día a día.
+            </p>
+
+            <div class="ht-actions">
+
+              <a
+                href="crecer-con-orden-estrategia-y-procesos/"
+                class="ht-btn ht-btn-primary"
+              >
+                Leer análisis
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <article
+          class="ht-news-card"
+          data-reveal
+          data-delay="1"
+        >
+
+          <div class="ht-news-card__visual">
+
+            <span class="ht-news-card__category">
+              Organización
+            </span>
+
+            <div class="ht-news-card__mark">
+              EQUIPO
+
+              <span>
+                Responsabilidad · Capacidad · Coordinación
+              </span>
+            </div>
+
+          </div>
+
+          <div class="ht-news-card__content">
+
+            <div class="ht-news-meta">
+              <span>Organización</span>
+              <span>Septiembre 2026</span>
+              <span>6 min</span>
+            </div>
+
+            <h2>
+              Cuando el equipo crece,
+              la organización también debe cambiar
+            </h2>
+
+            <p>
+              El crecimiento exige repartir decisiones,
+              clarificar responsabilidades y asegurar
+              que el conocimiento no dependa
+              de unas pocas personas.
+            </p>
+
+            <div class="ht-actions">
+
+              <a
+                href="cuando-el-equipo-crece/"
+                class="ht-btn ht-btn-primary"
+              >
+                Leer análisis
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- AGOSTO 2026 -->
+
+    <section class="ht-news-month">
+
+      <p class="ht-news-month__title">
+        Agosto 2026
+      </p>
+
+      <div class="ht-news-grid">
+
+
+        <article class="ht-news-card" data-reveal>
+
+          <div class="ht-news-card__visual">
+
+            <span class="ht-news-card__category">
+              Estrategia y gestión
+            </span>
+
+            <div class="ht-news-card__mark">
+              PYME
+
+              <span>
+                Decidir · Priorizar · Ejecutar
+              </span>
+            </div>
+
+          </div>
+
+          <div class="ht-news-card__content">
+
+            <div class="ht-news-meta">
+              <span>Estrategia y gestión</span>
+              <span>Agosto 2026</span>
+              <span>7 min</span>
+            </div>
+
+            <h2>
+              Cuándo necesita una pyme consultoría empresarial
+              y qué valor debe exigir
+            </h2>
+
+            <p>
+              Señales para identificar cuándo una empresa
+              puede beneficiarse de una mirada externa
+              y qué debería esperar de un proyecto de consultoría útil.
+            </p>
+
+            <div class="ht-actions">
+
+              <a
+                href="cuando-necesita-una-pyme-consultoria-empresarial/"
+                class="ht-btn ht-btn-primary"
+              >
+                Leer análisis
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <article
+          class="ht-news-card"
+          data-reveal
+          data-delay="1"
+        >
+
+          <div class="ht-news-card__visual">
+
+            <span class="ht-news-card__category">
+              Finanzas y gestión
+            </span>
+
+            <div class="ht-news-card__mark">
+              CAJA
+
+              <span>
+                Cobros · Pagos · Tesorería
+              </span>
+            </div>
+
+          </div>
+
+          <div class="ht-news-card__content">
+
+            <div class="ht-news-meta">
+              <span>Finanzas y gestión</span>
+              <span>Agosto 2026</span>
+              <span>6 min</span>
+            </div>
+
+            <h2>
+              Una empresa puede ser rentable y quedarse sin liquidez:
+              cómo anticipar las tensiones de tesorería
+            </h2>
+
+            <p>
+              Beneficio y caja no son lo mismo.
+              Anticipar cobros, pagos y necesidades de financiación
+              es esencial para sostener la actividad.
+            </p>
+
+            <div class="ht-actions">
+
+              <a
+                href="rentabilidad-liquidez-tesoreria/"
+                class="ht-btn ht-btn-primary"
+              >
+                Leer análisis
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
 
 
   </div>
@@ -687,9 +824,7 @@
 
       <div class="ht-footer-col">
 
-        <strong>
-          Navegación
-        </strong>
+        <strong>Navegación</strong>
 
         <a href="../">Inicio</a>
         <a href="../servicios/">Servicios</a>
@@ -703,9 +838,7 @@
 
       <div class="ht-footer-col">
 
-        <strong>
-          Contacto
-        </strong>
+        <strong>Contacto</strong>
 
         <a href="mailto:info@hierrotorrecilla.es">
           info@hierrotorrecilla.es
@@ -734,17 +867,9 @@
 
       <div class="ht-footer-legal">
 
-        <a href="../aviso-legal/">
-          Aviso legal
-        </a>
-
-        <a href="../privacidad/">
-          Privacidad
-        </a>
-
-        <a href="../cookies/">
-          Cookies
-        </a>
+        <a href="../aviso-legal/">Aviso legal</a>
+        <a href="../privacidad/">Privacidad</a>
+        <a href="../cookies/">Cookies</a>
 
       </div>
 
