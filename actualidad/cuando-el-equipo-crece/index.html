@@ -1,1 +1,584 @@
+<!DOCTYPE html>
 
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Cuando el equipo crece | Hierro Torrecilla
+  </title>
+
+  <meta
+    name="description"
+    content="Cómo adaptar responsabilidades, decisiones y coordinación cuando una pyme aumenta su equipo y su actividad."
+  >
+
+  <link
+    rel="canonical"
+    href="https://hierrotorrecilla.es/actualidad/cuando-el-equipo-crece/"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../../assets/css/hierro-torrecilla.css"
+  >
+
+  <style>
+
+    .ht-article-hero {
+      padding:108px 0 84px;
+      background:
+        radial-gradient(circle at 8% 18%,rgba(159,227,224,.24),transparent 30%),
+        radial-gradient(circle at 90% 15%,rgba(31,165,163,.19),transparent 30%),
+        linear-gradient(115deg,#E6F2EF 0%,#EFF7F4 35%,#D9EBE7 100%);
+    }
+
+    .ht-article-hero__inner{max-width:980px;}
+
+    .ht-article-back{
+      display:inline-flex;
+      margin-bottom:42px;
+      color:var(--ht-teal-dark);
+      font-size:.8rem;
+      font-weight:800;
+      text-decoration:none;
+    }
+
+    .ht-article-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px 22px;
+      margin-bottom:24px;
+      color:var(--ht-teal-dark);
+      font-size:.72rem;
+      font-weight:900;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .ht-article-title{
+      margin:0;
+      color:var(--ht-ink);
+      font-size:clamp(2.8rem,6vw,5.3rem);
+      line-height:.98;
+      letter-spacing:-.058em;
+    }
+
+    .ht-article-intro{
+      max-width:820px;
+      margin:36px 0 0;
+      color:var(--ht-muted);
+      font-size:1.18rem;
+      line-height:1.78;
+    }
+
+    .ht-article{padding:92px 0 112px;}
+
+    .ht-article-layout{
+      display:grid;
+      grid-template-columns:minmax(0,760px) 240px;
+      justify-content:center;
+      gap:90px;
+      align-items:start;
+    }
+
+    .ht-article-body h2{
+      margin:72px 0 24px;
+      color:var(--ht-ink);
+      font-size:clamp(1.8rem,3vw,2.5rem);
+      line-height:1.1;
+      letter-spacing:-.035em;
+    }
+
+    .ht-article-body p{
+      margin:0 0 25px;
+      color:#465250;
+      font-size:1.05rem;
+      line-height:1.86;
+    }
+
+    .ht-article-body strong{color:var(--ht-ink);}
+    .ht-article-body a{color:var(--ht-teal-dark);font-weight:700;}
+
+    .ht-article-aside{
+      position:sticky;
+      top:120px;
+      padding:24px;
+      border:1px solid var(--ht-line);
+      border-radius:20px;
+      background:rgba(234,241,239,.6);
+    }
+
+    .ht-article-aside span{
+      display:block;
+      margin-bottom:12px;
+      color:var(--ht-teal-dark);
+      font-size:.68rem;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+
+    .ht-article-aside p{
+      margin:0;
+      color:var(--ht-muted);
+      font-size:.86rem;
+      line-height:1.65;
+    }
+
+    .ht-article-aside a{
+      display:inline-block;
+      margin-top:18px;
+      color:var(--ht-dark);
+      font-size:.82rem;
+      font-weight:850;
+      text-decoration:none;
+    }
+
+    .ht-article-closing{
+      margin-top:70px;
+      padding:42px;
+      border-radius:24px;
+      background:var(--ht-dark);
+    }
+
+    .ht-article-closing .ht-kicker{color:var(--ht-mint);}
+    .ht-article-closing h2{color:#FFF;}
+    .ht-article-closing p{color:rgba(255,255,255,.72);}
+
+    @media(max-width:1000px){
+      .ht-article-layout{grid-template-columns:minmax(0,760px);}
+      .ht-article-aside{position:static;}
+    }
+
+    @media(max-width:760px){
+      .ht-article-hero{padding:80px 0 62px;}
+      .ht-article-title{font-size:2.65rem;}
+      .ht-article{padding:68px 0 82px;}
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<header class="ht-header">
+
+  <div class="ht-shell ht-nav">
+
+    <a href="../../" class="ht-brand">
+      HIE<span class="rr-special">RR</span>O
+      TO<span class="rr-special">RR</span>ECILLA
+    </a>
+
+    <nav class="ht-menu">
+
+      <a href="../../">Inicio</a>
+      <a href="../../servicios/">Servicios</a>
+      <a href="../../por-que-rr/">¿Por qué RR?</a>
+      <a href="../" class="active">Actualidad</a>
+      <a href="../../nosotros/">Nosotros</a>
+
+      <a href="../../contacto/" class="ht-menu-contact">
+        Contacto
+      </a>
+
+    </nav>
+
+    <button
+      type="button"
+      class="ht-menu-toggle"
+      id="htMenuToggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="htMobileMenu"
+    >
+      <span></span>
+    </button>
+
+  </div>
+
+</header>
+
+
+
+<nav class="ht-mobile-menu" id="htMobileMenu">
+
+  <a href="../../">Inicio</a>
+  <a href="../../servicios/">Servicios</a>
+  <a href="../../por-que-rr/">¿Por qué RR?</a>
+  <a href="../">Actualidad</a>
+  <a href="../../nosotros/">Nosotros</a>
+  <a href="../../contacto/">Contacto</a>
+
+</nav>
+
+
+
+<main>
+
+
+<section class="ht-article-hero">
+
+  <div class="ht-shell">
+
+    <div class="ht-article-hero__inner">
+
+      <a href="../" class="ht-article-back">
+        ← Volver a Actualidad
+      </a>
+
+      <div class="ht-article-meta">
+
+        <span>Organización</span>
+        <span>Septiembre 2026</span>
+        <span>6 min de lectura</span>
+
+      </div>
+
+      <h1 class="ht-article-title">
+
+        Cuando el equipo crece,
+        la organización también debe cambiar
+
+      </h1>
+
+      <p class="ht-article-intro">
+
+        La cercanía y la comunicación informal pueden funcionar
+        muy bien en equipos pequeños. A medida que la empresa crece,
+        sin embargo, depender de unas pocas personas
+        empieza a generar bloqueos.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<article class="ht-article">
+
+  <div class="ht-shell">
+
+    <div class="ht-article-layout">
+
+      <div class="ht-article-body">
+
+
+        <p>
+
+          En muchas pymes, la dirección conoce los proyectos
+          y las decisiones se toman conversando.
+          Esa forma de trabajar puede ser eficaz durante años.
+
+        </p>
+
+        <p>
+
+          Cuando aumentan los clientes, los encargos o la plantilla,
+          empieza a depender demasiado de la memoria
+          y la disponibilidad de unas pocas personas.
+
+        </p>
+
+        <p>
+
+          Además, incorporar personal no siempre es sencillo.
+          En el primer trimestre de 2026,
+          el Banco de España señalaba que
+          <strong>el 45 % de las empresas encuestadas</strong>
+          declaraba dificultades relacionadas
+          con la disponibilidad de mano de obra.
+
+        </p>
+
+
+        <h2>
+          Las señales de una estructura que se ha quedado pequeña
+        </h2>
+
+        <p>
+
+          Un aviso frecuente es que todo deba pasar
+          por la misma persona: presupuestos,
+          cambios solicitados por clientes,
+          prioridades del equipo y resolución de incidencias.
+
+        </p>
+
+        <p>
+
+          Otro es que dos áreas crean que la otra
+          se ocupa de una tarea,
+          o que nadie sepa quién puede aprobar una excepción.
+
+        </p>
+
+        <p>
+
+          También hay señales menos visibles:
+          un profesional experimentado acumula conocimientos
+          que no se comparten;
+          una nueva incorporación tarda demasiado
+          en entender cómo se trabaja;
+          o los proyectos se aceptan
+          sin comprobar la capacidad disponible.
+
+        </p>
+
+
+        <h2>
+          Cuatro decisiones que aportan claridad
+        </h2>
+
+        <p>
+
+          La primera es <strong>definir responsabilidades por resultado</strong>.
+          Más que enumerar todas las tareas de cada puesto,
+          conviene aclarar quién responde
+          de que una propuesta salga a tiempo,
+          de que un proyecto se entregue
+          o de que una incidencia llegue
+          a quien puede resolverla.
+
+        </p>
+
+        <p>
+
+          La segunda es
+          <strong>establecer qué decisiones puede tomar cada persona</strong>.
+          Delegar exige límites comprensibles:
+          qué puede acordarse con un cliente,
+          cuándo debe consultarse a dirección
+          y qué información debe acompañar
+          una solicitud de aprobación.
+
+        </p>
+
+        <p>
+
+          La tercera es <strong>planificar la capacidad</strong>.
+          Antes de asumir nuevos trabajos,
+          la empresa debe conocer sus compromisos,
+          las personas disponibles
+          y los puntos en los que se acumulan las esperas.
+
+        </p>
+
+        <p>
+
+          La cuarta es <strong>compartir el conocimiento esencial</strong>.
+          Las instrucciones para una tarea crítica
+          y los criterios habituales de decisión
+          no deberían depender exclusivamente
+          de quien lleva años haciéndola.
+
+        </p>
+
+
+        <h2>
+          Cambiar la forma de trabajar sin perder cercanía
+        </h2>
+
+        <p>
+
+          Una organización más clara no exige llenar la agenda
+          de reuniones ni crear capas de aprobación.
+
+        </p>
+
+        <p>
+
+          Puede comenzar con una conversación semanal breve
+          sobre prioridades, obstáculos y capacidad;
+          una definición sencilla de responsables;
+          y un modo conocido por todos
+          para plantear incidencias.
+
+        </p>
+
+        <p>
+
+          Para evaluar la mejora conviene observar resultados concretos:
+          cumplimiento de plazos,
+          trabajos que requieren correcciones,
+          tareas pendientes,
+          tiempo de incorporación de nuevos profesionales
+          y frecuencia con la que una decisión queda bloqueada.
+
+        </p>
+
+
+        <h2>
+          Preparar a la empresa para su siguiente etapa
+        </h2>
+
+        <p>
+
+          Crecer no consiste solo en sumar personas.
+          También requiere distribuir decisiones,
+          desarrollar capacidades
+          y asegurar que el conocimiento circula.
+
+        </p>
+
+        <p>
+
+          En Hierro Torrecilla trabajamos la organización
+          desde los procesos reales de cada empresa:
+          identificamos dónde se concentran las decisiones,
+          qué responsabilidades necesitan claridad
+          y qué cambios pueden implantarse de forma progresiva.
+
+        </p>
+
+        <p>
+
+          <strong>
+            El objetivo es que el crecimiento descanse
+            sobre un equipo capaz de sostenerlo.
+          </strong>
+
+        </p>
+
+
+        <section class="ht-article-closing">
+
+          <p class="ht-kicker">
+            Organización
+          </p>
+
+          <h2>
+            Crecer exige repartir mejor decisiones y responsabilidades.
+          </h2>
+
+          <p>
+
+            Si el crecimiento está generando bloqueos,
+            sobrecarga o falta de claridad,
+            podemos empezar analizando
+            cómo se organiza hoy el trabajo.
+
+          </p>
+
+          <a href="../../contacto/" class="ht-btn ht-btn-primary">
+            Cuéntanos tu reto
+          </a>
+
+        </section>
+
+
+      </div>
+
+
+      <aside class="ht-article-aside">
+
+        <span>
+          Sobre este análisis
+        </span>
+
+        <p>
+
+          Contenido elaborado por Hierro Torrecilla
+          a partir de fuentes oficiales
+          y orientado a la toma de decisiones empresariales.
+
+        </p>
+
+        <a href="../../servicios/#procesos">
+          Ver servicios de organización y procesos
+        </a>
+
+      </aside>
+
+
+    </div>
+
+  </div>
+
+</article>
+
+
+</main>
+
+
+
+<footer class="ht-footer">
+
+  <div class="ht-shell">
+
+    <div class="ht-footer-grid">
+
+      <div class="ht-footer-brand">
+
+        <a href="../../" class="ht-footer-logo">
+          HIE<span class="rr">RR</span>O
+          TO<span class="rr">RR</span>ECILLA
+        </a>
+
+        <small>Consultoría Empresarial</small>
+
+        <h3>Rigor y Resultados.</h3>
+
+        <p>
+          Estrategia, gestión y tecnología
+          para empresas que quieren avanzar con claridad.
+        </p>
+
+      </div>
+
+      <div class="ht-footer-col">
+
+        <strong>Navegación</strong>
+
+        <a href="../../">Inicio</a>
+        <a href="../../servicios/">Servicios</a>
+        <a href="../../por-que-rr/">¿Por qué RR?</a>
+        <a href="../">Actualidad</a>
+        <a href="../../nosotros/">Nosotros</a>
+        <a href="../../contacto/">Contacto</a>
+
+      </div>
+
+      <div class="ht-footer-col">
+
+        <strong>Contacto</strong>
+
+        <a href="mailto:info@hierrotorrecilla.es">
+          info@hierrotorrecilla.es
+        </a>
+
+        <a href="tel:+34611561535">
+          +34 611 561 535
+        </a>
+
+        <p>Madrid · La Rioja</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script src="../../assets/js/main.js"></script>
+
+
+</body>
+
+</html>
