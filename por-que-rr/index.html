@@ -58,22 +58,16 @@
       margin-top: 34px;
     }
 
-    .ht-rr-hero__note {
-      color: var(--ht-muted);
-      font-size: .82rem;
-      font-weight: 700;
-    }
-
 
     /* ==================================================
-       DATOS / CREDIBILIDAD
+       DATOS CLAVE
        ================================================== */
 
     .ht-rr-stats {
       position: relative;
       z-index: 3;
       margin-top: -28px;
-      padding-bottom: 96px;
+      padding-bottom: 104px;
     }
 
     .ht-rr-stats__grid {
@@ -82,7 +76,7 @@
       overflow: hidden;
       border: 1px solid rgba(23, 63, 66, .10);
       border-radius: 26px;
-      background: rgba(255,255,255,.94);
+      background: rgba(255,255,255,.95);
       box-shadow: 0 24px 65px rgba(23,63,66,.10);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
@@ -113,7 +107,7 @@
     }
 
     .ht-rr-stat p {
-      max-width: 190px;
+      max-width: 195px;
       margin: 22px 0 0;
       color: var(--ht-muted);
       font-size: .88rem;
@@ -126,118 +120,21 @@
        ================================================== */
 
     .ht-founder-section {
-      padding: 30px 0 118px;
+      padding: 28px 0 122px;
     }
 
     .ht-founder {
       display: grid;
-      grid-template-columns: minmax(340px, .88fr) minmax(0, 1.12fr);
-      gap: 72px;
+      grid-template-columns: minmax(0, 1.02fr) minmax(390px, .98fr);
+      gap: 76px;
       align-items: center;
     }
 
-    .ht-founder__visual {
-      position: relative;
-    }
 
-    .ht-founder__photo {
-      position: relative;
-      min-height: 590px;
-      overflow: hidden;
-      border-radius: 32px;
-      background:
-        radial-gradient(
-          circle at 20% 15%,
-          rgba(159,227,224,.32),
-          transparent 30%
-        ),
-        linear-gradient(
-          145deg,
-          #214D50 0%,
-          #173F42 55%,
-          #0F6E73 100%
-        );
-      box-shadow: 0 30px 70px rgba(23,63,66,.18);
-    }
-
-    .ht-founder__photo::before {
-      content: "";
-      position: absolute;
-      width: 330px;
-      height: 330px;
-      right: -140px;
-      top: -120px;
-      border: 1px solid rgba(159,227,224,.24);
-      border-radius: 50%;
-    }
-
-    .ht-founder__photo::after {
-      content: "";
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      left: -100px;
-      bottom: -80px;
-      border: 1px solid rgba(159,227,224,.16);
-      border-radius: 50%;
-    }
-
-    .ht-founder__initials {
-      position: absolute;
-      left: 34px;
-      bottom: 30px;
-      z-index: 1;
-      color: rgba(255,255,255,.12);
-      font-size: clamp(5rem, 10vw, 9rem);
-      font-weight: 900;
-      line-height: .8;
-      letter-spacing: -.08em;
-    }
-
-    .ht-founder__photo img {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .ht-founder__badge {
-      position: absolute;
-      right: -25px;
-      bottom: 38px;
-      z-index: 4;
-      width: 185px;
-      padding: 22px;
-      border: 1px solid rgba(255,255,255,.65);
-      border-radius: 20px;
-      background: rgba(255,255,255,.94);
-      box-shadow: 0 18px 45px rgba(23,63,66,.14);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-    }
-
-    .ht-founder__badge span {
-      display: block;
-      color: var(--ht-teal-dark);
-      font-size: .65rem;
-      font-weight: 900;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    .ht-founder__badge strong {
-      display: block;
-      margin-top: 8px;
-      color: var(--ht-dark);
-      font-size: .95rem;
-      line-height: 1.35;
-    }
+    /* TEXTO */
 
     .ht-founder__content {
-      max-width: 700px;
+      max-width: 690px;
     }
 
     .ht-founder__name {
@@ -253,7 +150,7 @@
       color: var(--ht-teal-dark);
       font-size: .83rem;
       font-weight: 900;
-      letter-spacing: .08em;
+      letter-spacing: .1em;
       text-transform: uppercase;
     }
 
@@ -292,9 +189,10 @@
       margin-top: 32px;
     }
 
-    .ht-linkedin-link {
+    .ht-founder-link {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 9px;
       min-height: 48px;
       padding: 0 18px;
@@ -307,13 +205,119 @@
       transition:
         background .2s ease,
         color .2s ease,
+        border-color .2s ease,
         transform .2s ease;
     }
 
-    .ht-linkedin-link:hover {
+    .ht-founder-link:hover {
       background: var(--ht-dark);
+      border-color: var(--ht-dark);
       color: #FFFFFF;
       transform: translateY(-2px);
+    }
+
+    .ht-founder-link--primary {
+      background: var(--ht-dark);
+      border-color: var(--ht-dark);
+      color: #FFFFFF;
+    }
+
+    .ht-founder-link--primary:hover {
+      background: var(--ht-dark-hover);
+      border-color: var(--ht-dark-hover);
+    }
+
+
+    /* FOTO */
+
+    .ht-founder__visual {
+      position: relative;
+    }
+
+    .ht-founder__photo {
+      position: relative;
+      min-height: 590px;
+      overflow: hidden;
+      border-radius: 30px;
+      background:
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(159,227,224,.32),
+          transparent 30%
+        ),
+        linear-gradient(
+          145deg,
+          #214D50 0%,
+          #173F42 55%,
+          #0F6E73 100%
+        );
+      box-shadow: 0 30px 70px rgba(23,63,66,.16);
+    }
+
+    .ht-founder__photo::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      right: -150px;
+      top: -130px;
+      border: 1px solid rgba(159,227,224,.24);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .ht-founder__photo img {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+
+    /* CITA SOBRE FOTO */
+
+    .ht-founder__quote {
+      position: absolute;
+      right: -28px;
+      bottom: 34px;
+      z-index: 5;
+      width: 255px;
+      padding: 27px 25px;
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 22px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 22px 55px rgba(23,63,66,.16);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+
+    .ht-founder__quote-mark {
+      display: block;
+      height: 26px;
+      color: var(--ht-teal-dark);
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .ht-founder__quote p {
+      margin: 14px 0 0;
+      color: var(--ht-dark);
+      font-size: .92rem;
+      line-height: 1.55;
+    }
+
+    .ht-founder__quote small {
+      display: block;
+      margin-top: 18px;
+      color: var(--ht-teal-dark);
+      font-size: .61rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
     }
 
 
@@ -325,7 +329,13 @@
       position: relative;
       padding: 118px 0;
       overflow: hidden;
-      background: var(--ht-dark);
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(31,165,163,.16),
+          transparent 32%
+        ),
+        var(--ht-dark);
     }
 
     .ht-experts-section::before {
@@ -524,7 +534,7 @@
     }
 
 
-    /* TRES PILARES */
+    /* PILARES */
 
     .ht-network-pillars {
       display: grid;
@@ -781,7 +791,7 @@
 
 
     /* ==================================================
-       MOBILE / TABLET
+       RESPONSIVE
        ================================================== */
 
     @media (max-width: 1050px) {
@@ -800,8 +810,8 @@
       }
 
       .ht-founder {
-        grid-template-columns: .9fr 1.1fr;
-        gap: 50px;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
       }
 
       .ht-founder__photo {
@@ -821,15 +831,20 @@
         grid-template-columns: 1fr;
       }
 
+      .ht-founder__content {
+        order: 1;
+      }
+
       .ht-founder__visual {
-        max-width: 580px;
+        order: 2;
+        max-width: 620px;
       }
 
       .ht-founder__photo {
         min-height: 650px;
       }
 
-      .ht-founder__badge {
+      .ht-founder__quote {
         right: 22px;
       }
 
@@ -909,19 +924,19 @@
       }
 
       .ht-founder-section {
-        padding: 20px 0 82px;
+        padding: 18px 0 82px;
       }
 
       .ht-founder__photo {
-        min-height: 490px;
+        min-height: 500px;
         border-radius: 24px;
       }
 
-      .ht-founder__badge {
+      .ht-founder__quote {
         right: 16px;
         bottom: 18px;
-        width: 168px;
-        padding: 18px;
+        width: 220px;
+        padding: 21px;
       }
 
       .ht-founder__name {
@@ -1024,10 +1039,10 @@
       }
 
       .ht-founder__photo {
-        min-height: 420px;
+        min-height: 430px;
       }
 
-      .ht-founder__badge {
+      .ht-founder__quote {
         position: relative;
         right: auto;
         bottom: auto;
@@ -1133,29 +1148,12 @@
   aria-label="Navegación móvil"
 >
 
-  <a href="../">
-    Inicio
-  </a>
-
-  <a href="../servicios/">
-    Servicios
-  </a>
-
-  <a href="./">
-    ¿Por qué RR?
-  </a>
-
-  <a href="../actualidad/">
-    Actualidad
-  </a>
-
-  <a href="../nosotros/">
-    Nosotros
-  </a>
-
-  <a href="../contacto/">
-    Contacto
-  </a>
+  <a href="../">Inicio</a>
+  <a href="../servicios/">Servicios</a>
+  <a href="./">¿Por qué RR?</a>
+  <a href="../actualidad/">Actualidad</a>
+  <a href="../nosotros/">Nosotros</a>
+  <a href="../contacto/">Contacto</a>
 
 </nav>
 
@@ -1218,10 +1216,6 @@
       >
         Cuéntanos tu reto
       </a>
-
-      <span class="ht-rr-hero__note">
-        Negocio · Procesos · Datos · Tecnología
-      </span>
 
     </div>
 
@@ -1319,46 +1313,8 @@
 
 
       <div
-        class="ht-founder__visual"
-        data-reveal="left"
-      >
-
-        <div class="ht-founder__photo">
-
-          <span class="ht-founder__initials">
-            JHT
-          </span>
-
-          <img
-            src="../assets/img/julia-hierro-torrecilla.jpg"
-            alt="Julia Hierro Torrecilla, fundadora de Hierro Torrecilla"
-            loading="lazy"
-            onerror="this.style.display='none'"
-          >
-
-        </div>
-
-
-        <div class="ht-founder__badge">
-
-          <span>
-            Modelo boutique
-          </span>
-
-          <strong>
-            Dirección cercana.
-            Capacidad flexible.
-          </strong>
-
-        </div>
-
-      </div>
-
-
-
-      <div
         class="ht-founder__content"
-        data-reveal="right"
+        data-reveal="left"
       >
 
         <p class="ht-kicker">
@@ -1437,19 +1393,59 @@
             href="https://www.linkedin.com/in/julia-hierro-torrecilla2001008"
             target="_blank"
             rel="noopener noreferrer"
-            class="ht-linkedin-link"
+            class="ht-founder-link ht-founder-link--primary"
           >
             Ver perfil en LinkedIn ↗
           </a>
 
           <a
             href="../nosotros/"
-            class="ht-linkedin-link"
+            class="ht-founder-link"
           >
             Conocer Hierro Torrecilla
           </a>
 
         </div>
+
+      </div>
+
+
+
+      <div
+        class="ht-founder__visual"
+        data-reveal="right"
+      >
+
+        <div class="ht-founder__photo">
+
+          <img
+            src="../assets/img/julia-hierro-torrecilla.jpg"
+            alt="Julia Hierro Torrecilla, fundadora y consultora principal de Hierro Torrecilla"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <aside class="ht-founder__quote">
+
+          <span class="ht-founder__quote-mark">
+            “
+          </span>
+
+          <p>
+
+            Entender el negocio,
+            contrastar las opciones
+            y acompañar su puesta en práctica.
+
+          </p>
+
+          <small>
+            Julia Hierro Torrecilla
+          </small>
+
+        </aside>
 
       </div>
 
@@ -1511,7 +1507,6 @@
       data-reveal
     >
 
-
       <div class="ht-network-core">
 
         <strong>
@@ -1535,7 +1530,7 @@
       </div>
 
       <div class="ht-network-node ht-node-3">
-        Datos & BI
+        Datos &amp; BI
       </div>
 
       <div class="ht-network-node ht-node-4">
@@ -1555,9 +1550,8 @@
       </div>
 
       <div class="ht-network-node ht-node-8">
-        PMO & Proyectos
+        PMO &amp; Proyectos
       </div>
-
 
     </div>
 
@@ -1726,21 +1720,10 @@
 
         <div class="ht-chip-row">
 
-          <span class="ht-chip">
-            Análisis
-          </span>
-
-          <span class="ht-chip">
-            Evidencia
-          </span>
-
-          <span class="ht-chip">
-            Viabilidad
-          </span>
-
-          <span class="ht-chip">
-            Priorización
-          </span>
+          <span class="ht-chip">Análisis</span>
+          <span class="ht-chip">Evidencia</span>
+          <span class="ht-chip">Viabilidad</span>
+          <span class="ht-chip">Priorización</span>
 
         </div>
 
@@ -1779,21 +1762,10 @@
 
         <div class="ht-chip-row">
 
-          <span class="ht-chip">
-            Ejecución
-          </span>
-
-          <span class="ht-chip">
-            Impacto
-          </span>
-
-          <span class="ht-chip">
-            Seguimiento
-          </span>
-
-          <span class="ht-chip">
-            Retorno
-          </span>
+          <span class="ht-chip">Ejecución</span>
+          <span class="ht-chip">Impacto</span>
+          <span class="ht-chip">Seguimiento</span>
+          <span class="ht-chip">Retorno</span>
 
         </div>
 
@@ -1966,7 +1938,7 @@
 
 
 <!-- ==================================================
-     METODOLOGÍA REDUCIDA
+     METODOLOGÍA
      ================================================== -->
 
 <section
@@ -2113,7 +2085,7 @@
 
 
 <!-- ==================================================
-     CLIENTES + COLABORADORES
+     EMPRESAS + PROFESIONALES
      ================================================== -->
 
 <section class="ht-dual-cta">
@@ -2253,10 +2225,6 @@
 
 
 
-<!-- ==================================================
-     FOOTER
-     ================================================== -->
-
 <footer class="ht-footer">
 
   <div class="ht-shell">
@@ -2298,29 +2266,12 @@
           Navegación
         </strong>
 
-        <a href="../">
-          Inicio
-        </a>
-
-        <a href="../servicios/">
-          Servicios
-        </a>
-
-        <a href="./">
-          ¿Por qué RR?
-        </a>
-
-        <a href="../actualidad/">
-          Actualidad
-        </a>
-
-        <a href="../nosotros/">
-          Nosotros
-        </a>
-
-        <a href="../contacto/">
-          Contacto
-        </a>
+        <a href="../">Inicio</a>
+        <a href="../servicios/">Servicios</a>
+        <a href="./">¿Por qué RR?</a>
+        <a href="../actualidad/">Actualidad</a>
+        <a href="../nosotros/">Nosotros</a>
+        <a href="../contacto/">Contacto</a>
 
       </div>
 
